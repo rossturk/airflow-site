@@ -21,13 +21,21 @@
             <link rel="search" title="Search" href="../search.html" />
             <link rel="next" title="Amazon Transfer Operators" href="transfer/index.html" />
             <link rel="prev" title="Amazon Simple Notification Service (SNS) Operators" href="sns.html" />
-    <script type="application/javascript">
-        var doNotTrack = false;
-        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-        ga('create', 'UA-140539454-1', 'auto');
-        ga('send', 'pageview');
-    </script>
-    <script async src='https://www.google-analytics.com/analytics.js'></script>
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  _paq.push(['disableCookies']);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://analytics.apache.org/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '13']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo -->
 
     
 </head><body class="td-section">
@@ -619,7 +627,7 @@ to publish a message to Amazon Simple Queue Service (SQS).</p>
 <p>In the following example, the task &quot;publish_to_queue&quot; publishes a message containing
 the task instance and the execution date to a queue named <code class="docutils literal notranslate"><span class="pre">Airflow-Example-Queue</span></code>.</p>
 <div class="example-block-wrapper docutils container">
-<p class="example-header example-header--with-button"><span class="example-title">airflow/providers/amazon/aws/example_dags/example_sqs.py</span><a class="example-header-button viewcode-button reference internal" href="../_modules/airflow/providers/amazon/aws/example_dags/example_sqs.html"><span class="viewcode-link">[source]</span></a></p>
+<p class="example-header example-header--with-button"><span class="example-title">airflow/providers/amazon/aws/example_dags/example_sqs.py</span><a class="example-header-button viewcode-button reference internal" href="https://github.com/apache/airflow/tree/providers-amazon/3.1.1/airflow/providers/amazon/aws/example_dags/example_sqs.py" target="_blank"><span class="viewcode-link">[source]</span></a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
     <span class="c1"># Using a task-decorated function to create an SQS queue</span>
     <span class="n">create_queue</span> <span class="o">=</span> <span class="n">create_queue_fn</span><span class="p">()</span>

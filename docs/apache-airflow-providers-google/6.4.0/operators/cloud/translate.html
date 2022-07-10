@@ -21,13 +21,21 @@
             <link rel="search" title="Search" href="../../search.html" />
             <link rel="next" title="Google Cloud Speech Translate Operators" href="translate_speech.html" />
             <link rel="prev" title="Google Cloud Text to Speech Operators" href="text_to_speech.html" />
-    <script type="application/javascript">
-        var doNotTrack = false;
-        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-        ga('create', 'UA-140539454-1', 'auto');
-        ga('send', 'pageview');
-    </script>
-    <script async src='https://www.google-analytics.com/analytics.js'></script>
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  _paq.push(['disableCookies']);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://analytics.apache.org/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '13']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo -->
 
     
 </head><body class="td-section">
@@ -604,7 +612,7 @@
 <h3>Using the operator<a class="headerlink" href="#using-the-operator" title="Permalink to this headline">¶</a></h3>
 <p>Basic usage of the operator:</p>
 <div class="example-block-wrapper docutils container">
-<p class="example-header example-header--with-button"><span class="example-title">airflow/providers/google/cloud/example_dags/example_translate.py</span><a class="example-header-button viewcode-button reference internal" href="../../_modules/airflow/providers/google/cloud/example_dags/example_translate.html"><span class="viewcode-link">[source]</span></a></p>
+<p class="example-header example-header--with-button"><span class="example-title">airflow/providers/google/cloud/example_dags/example_translate.py</span><a class="example-header-button viewcode-button reference internal" href="https://github.com/apache/airflow/tree/providers-google/6.4.0/airflow/providers/google/cloud/example_dags/example_translate.py" target="_blank"><span class="viewcode-link">[source]</span></a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">product_set_create</span> <span class="o">=</span> <span class="n">CloudTranslateTextOperator</span><span class="p">(</span>
     <span class="n">task_id</span><span class="o">=</span><span class="s1">&#39;translate&#39;</span><span class="p">,</span>
     <span class="n">values</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;zażółć gęślą jaźń&#39;</span><span class="p">],</span>
@@ -619,7 +627,7 @@
 <p>The result of translation is available as dictionary or array of dictionaries accessible via the usual
 XCom mechanisms of Airflow:</p>
 <div class="example-block-wrapper docutils container">
-<p class="example-header example-header--with-button"><span class="example-title">airflow/providers/google/cloud/example_dags/example_translate.py</span><a class="example-header-button viewcode-button reference internal" href="../../_modules/airflow/providers/google/cloud/example_dags/example_translate.html"><span class="viewcode-link">[source]</span></a></p>
+<p class="example-header example-header--with-button"><span class="example-title">airflow/providers/google/cloud/example_dags/example_translate.py</span><a class="example-header-button viewcode-button reference internal" href="https://github.com/apache/airflow/tree/providers-google/6.4.0/airflow/providers/google/cloud/example_dags/example_translate.py" target="_blank"><span class="viewcode-link">[source]</span></a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">translation_access</span> <span class="o">=</span> <span class="n">BashOperator</span><span class="p">(</span>
     <span class="n">task_id</span><span class="o">=</span><span class="s1">&#39;access&#39;</span><span class="p">,</span> <span class="n">bash_command</span><span class="o">=</span><span class="s2">&quot;echo &#39;{{ task_instance.xcom_pull(</span><span class="se">\&quot;</span><span class="s2">translate</span><span class="se">\&quot;</span><span class="s2">)[0] }}&#39;&quot;</span>
 <span class="p">)</span>

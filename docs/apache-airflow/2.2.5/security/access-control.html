@@ -21,13 +21,21 @@
             <link rel="search" title="Search" href="../search.html" />
             <link rel="next" title="API" href="api.html" />
             <link rel="prev" title="Security" href="index.html" />
-    <script type="application/javascript">
-        var doNotTrack = false;
-        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-        ga('create', 'UA-140539454-1', 'auto');
-        ga('send', 'pageview');
-    </script>
-    <script async src='https://www.google-analytics.com/analytics.js'></script>
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  _paq.push(['disableCookies']);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://analytics.apache.org/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '13']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo -->
 
     
 </head><body class="td-section">
@@ -712,7 +720,7 @@ other users.</p>
 <h3>Viewer<a class="headerlink" href="#viewer" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">Viewer</span></code> users have limited viewer permissions</p>
 <div class="example-block-wrapper docutils container">
-<p class="example-header example-header--with-button"><span class="example-title">airflow/www/security.py</span><a class="example-header-button viewcode-button reference internal" href="../_modules/airflow/www/security.html"><span class="viewcode-link">[source]</span></a></p>
+<p class="example-header example-header--with-button"><span class="example-title">airflow/www/security.py</span><a class="example-header-button viewcode-button reference internal" href="https://github.com/apache/airflow/tree/2.2.5/airflow/www/security.py" target="_blank"><span class="viewcode-link">[source]</span></a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">VIEWER_PERMISSIONS</span> <span class="o">=</span> <span class="p">[</span>
         <span class="p">(</span><span class="n">permissions</span><span class="o">.</span><span class="n">ACTION_CAN_READ</span><span class="p">,</span> <span class="n">permissions</span><span class="o">.</span><span class="n">RESOURCE_AUDIT_LOG</span><span class="p">),</span>
         <span class="p">(</span><span class="n">permissions</span><span class="o">.</span><span class="n">ACTION_CAN_READ</span><span class="p">,</span> <span class="n">permissions</span><span class="o">.</span><span class="n">RESOURCE_DAG</span><span class="p">),</span>
@@ -751,7 +759,7 @@ other users.</p>
 <h3>User<a class="headerlink" href="#user" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">User</span></code> users have <code class="docutils literal notranslate"><span class="pre">Viewer</span></code> permissions plus additional user permissions</p>
 <div class="example-block-wrapper docutils container">
-<p class="example-header example-header--with-button"><span class="example-title">airflow/www/security.py</span><a class="example-header-button viewcode-button reference internal" href="../_modules/airflow/www/security.html"><span class="viewcode-link">[source]</span></a></p>
+<p class="example-header example-header--with-button"><span class="example-title">airflow/www/security.py</span><a class="example-header-button viewcode-button reference internal" href="https://github.com/apache/airflow/tree/2.2.5/airflow/www/security.py" target="_blank"><span class="viewcode-link">[source]</span></a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">USER_PERMISSIONS</span> <span class="o">=</span> <span class="p">[</span>
         <span class="p">(</span><span class="n">permissions</span><span class="o">.</span><span class="n">ACTION_CAN_EDIT</span><span class="p">,</span> <span class="n">permissions</span><span class="o">.</span><span class="n">RESOURCE_DAG</span><span class="p">),</span>
         <span class="p">(</span><span class="n">permissions</span><span class="o">.</span><span class="n">ACTION_CAN_DELETE</span><span class="p">,</span> <span class="n">permissions</span><span class="o">.</span><span class="n">RESOURCE_DAG</span><span class="p">),</span>
@@ -771,7 +779,7 @@ other users.</p>
 <h3>Op<a class="headerlink" href="#op" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">Op</span></code> users have <code class="docutils literal notranslate"><span class="pre">User</span></code> permissions plus additional op permissions</p>
 <div class="example-block-wrapper docutils container">
-<p class="example-header example-header--with-button"><span class="example-title">airflow/www/security.py</span><a class="example-header-button viewcode-button reference internal" href="../_modules/airflow/www/security.html"><span class="viewcode-link">[source]</span></a></p>
+<p class="example-header example-header--with-button"><span class="example-title">airflow/www/security.py</span><a class="example-header-button viewcode-button reference internal" href="https://github.com/apache/airflow/tree/2.2.5/airflow/www/security.py" target="_blank"><span class="viewcode-link">[source]</span></a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">OP_PERMISSIONS</span> <span class="o">=</span> <span class="p">[</span>
         <span class="p">(</span><span class="n">permissions</span><span class="o">.</span><span class="n">ACTION_CAN_READ</span><span class="p">,</span> <span class="n">permissions</span><span class="o">.</span><span class="n">RESOURCE_CONFIG</span><span class="p">),</span>
         <span class="p">(</span><span class="n">permissions</span><span class="o">.</span><span class="n">ACTION_CAN_ACCESS_MENU</span><span class="p">,</span> <span class="n">permissions</span><span class="o">.</span><span class="n">RESOURCE_ADMIN_MENU</span><span class="p">),</span>

@@ -4,7 +4,7 @@
     <link>/blog/tags/release/</link>
     <description>Recent content in release on Apache Airflow</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 11 Oct 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 30 Apr 2022 00:00:00 +0000</lastBuildDate>
     
 	  <atom:link href="/blog/tags/release/index.xml" rel="self" type="application/rss+xml" />
     
@@ -13,6 +13,156 @@
         
       
     
+    
+    <item>
+      <title>Blog: Apache Airflow 2.3.0 is here</title>
+      <link>/blog/airflow-2.3.0/</link>
+      <pubDate>Sat, 30 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/airflow-2.3.0/</guid>
+      <description>
+        
+        
+        
+
+&lt;p&gt;Apache Airflow 2.3.0 contains over 700 commits since 2.2.0 and includes 50 new features, 99 improvements, 85 bug fixes, and several doc changes.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Details&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;p&gt;📦 PyPI: &lt;a href=&#34;https://pypi.org/project/apache-airflow/2.3.0/&#34; target=&#34;_blank&#34;&gt;https://pypi.org/project/apache-airflow/2.3.0/&lt;/a&gt; &lt;br /&gt;
+📚 Docs: &lt;a href=&#34;https://airflow.apache.org/docs/apache-airflow/2.3.0/&#34; target=&#34;_blank&#34;&gt;https://airflow.apache.org/docs/apache-airflow/2.3.0/&lt;/a&gt; &lt;br /&gt;
+🛠️ Release Notes: &lt;a href=&#34;https://airflow.apache.org/docs/apache-airflow/2.3.0/release_notes.html&#34; target=&#34;_blank&#34;&gt;https://airflow.apache.org/docs/apache-airflow/2.3.0/release_notes.html&lt;/a&gt; &lt;br /&gt;
+🐳 Docker Image: docker pull apache/airflow:2.3.0 &lt;br /&gt;
+🚏 Constraints: &lt;a href=&#34;https://github.com/apache/airflow/tree/constraints-2.3.0&#34; target=&#34;_blank&#34;&gt;https://github.com/apache/airflow/tree/constraints-2.3.0&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;As the changelog is quite large, the following are some notable new features that shipped in this release.&lt;/p&gt;
+
+&lt;h2 id=&#34;dynamic-task-mapping-aip-42&#34;&gt;Dynamic Task Mapping(AIP-42)&lt;/h2&gt;
+
+&lt;p&gt;There&amp;rsquo;s now first-class support for dynamic tasks in Airflow. What this means is that you can generate tasks dynamically at runtime. Much like using a &lt;code&gt;for&lt;/code&gt; loop
+to create a list of tasks, here you can create the same tasks without having to know the exact number of tasks ahead of time.&lt;/p&gt;
+
+&lt;p&gt;You can have a &lt;code&gt;task&lt;/code&gt; generate the list to iterate over, which is not possible with a &lt;code&gt;for&lt;/code&gt; loop.&lt;/p&gt;
+
+&lt;p&gt;Here is an example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;@task
+def make_list():
+    # This can also be from an API call, checking a database, -- almost anything you like, as long as the
+    # resulting list/dictionary can be stored in the current XCom backend.
+    return [1, 2, {&amp;quot;a&amp;quot;: &amp;quot;b&amp;quot;}, &amp;quot;str&amp;quot;]
+
+
+@task
+def consumer(arg):
+    print(list(arg))
+
+
+with DAG(dag_id=&amp;quot;dynamic-map&amp;quot;, start_date=datetime(2022, 4, 2)) as dag:
+    consumer.expand(arg=make_list())
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;More information can be found here: &lt;a href=&#34;https://airflow.apache.org/docs/apache-airflow/2.3.0/concepts/dynamic-task-mapping.html&#34; target=&#34;_blank&#34;&gt;Dynamic Task Mapping&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;grid-view-replaces-tree-view&#34;&gt;Grid View replaces Tree View&lt;/h2&gt;
+
+&lt;p&gt;Grid view replaces tree view in Airflow 2.3.0.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Screenshots&lt;/strong&gt;:
+&lt;img src=&#34;grid-view.png&#34; alt=&#34;The new grid view&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;purge-history-from-metadata-database&#34;&gt;Purge history from metadata database&lt;/h2&gt;
+
+&lt;p&gt;Airflow 2.3.0 introduces a new &lt;code&gt;airflow db clean&lt;/code&gt; command that can be used to purge old data from the metadata database.&lt;/p&gt;
+
+&lt;p&gt;You would want to use this command if you want to reduce the size of the metadata database.&lt;/p&gt;
+
+&lt;p&gt;More information can be found here: &lt;a href=&#34;https://airflow.apache.org/docs/apache-airflow/2.3.0/usage-cli.html#purge-history-from-metadata-database&#34; target=&#34;_blank&#34;&gt;Purge history from metadata database&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;localkubernetesexecutor&#34;&gt;LocalKubernetesExecutor&lt;/h2&gt;
+
+&lt;p&gt;There is a new executor named LocalKubernetesExecutor. This executor helps you run some tasks using LocalExecutor and run another set of tasks using the KubernetesExecutor in the same deployment based on the task&amp;rsquo;s queue.&lt;/p&gt;
+
+&lt;p&gt;More information can be found here: &lt;a href=&#34;https://airflow.apache.org/docs/apache-airflow/2.3.0/executor/local_kubernetes.html&#34; target=&#34;_blank&#34;&gt;LocalKubernetesExecutor&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;dagprocessormanager-as-standalone-process-aip-43&#34;&gt;DagProcessorManager as standalone process (AIP-43)&lt;/h2&gt;
+
+&lt;p&gt;As of 2.3.0, you can run the DagProcessorManager as a standalone process. Because DagProcessorManager runs user code, separating it from the scheduler process and running it as an independent process in a different host is a good idea.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code&gt;airflow dag-processor&lt;/code&gt; cli command will start a new process that will run the DagProcessorManager in a separate process. Before you can run the DagProcessorManager as a standalone process, you need to set the &lt;a href=&#34;https://airflow.apache.org/docs/apache-airflow/stable/configurations-ref.html#standalone_dag_processor&#34; target=&#34;_blank&#34;&gt;[scheduler] standalone_dag_processor&lt;/a&gt; to &lt;code&gt;True&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;More information can be found here: &lt;a href=&#34;https://airflow.apache.org/docs/apache-airflow/2.3.0/cli-and-env-variables-ref.html#dag-processor&#34; target=&#34;_blank&#34;&gt;dag-processor CLI command&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;json-serialization-for-connections&#34;&gt;JSON serialization for connections&lt;/h2&gt;
+
+&lt;p&gt;You can now create connections using the &lt;code&gt;json&lt;/code&gt; serialization format.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;airflow connections add &#39;my_prod_db&#39; \
+    --conn-json &#39;{
+        &amp;quot;conn_type&amp;quot;: &amp;quot;my-conn-type&amp;quot;,
+        &amp;quot;login&amp;quot;: &amp;quot;my-login&amp;quot;,
+        &amp;quot;password&amp;quot;: &amp;quot;my-password&amp;quot;,
+        &amp;quot;host&amp;quot;: &amp;quot;my-host&amp;quot;,
+        &amp;quot;port&amp;quot;: 1234,
+        &amp;quot;schema&amp;quot;: &amp;quot;my-schema&amp;quot;,
+        &amp;quot;extra&amp;quot;: {
+            &amp;quot;param1&amp;quot;: &amp;quot;val1&amp;quot;,
+            &amp;quot;param2&amp;quot;: &amp;quot;val2&amp;quot;
+        }
+    }&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can also use &lt;code&gt;json&lt;/code&gt; serialization format when setting the connection in environment variables.&lt;/p&gt;
+
+&lt;p&gt;More information can be found here: &lt;a href=&#34;https://airflow.apache.org/docs/apache-airflow/2.3.0/howto/connection.html&#34; target=&#34;_blank&#34;&gt;JSON serialization for connections&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;airflow-db-downgrade-and-offline-generation-of-sql-scripts&#34;&gt;Airflow &lt;code&gt;db downgrade&lt;/code&gt; and Offline generation of SQL scripts&lt;/h2&gt;
+
+&lt;p&gt;Airflow 2.3.0 introduced a new command &lt;code&gt;airflow db downgrade&lt;/code&gt; that will downgrade the database to your chosen version.&lt;/p&gt;
+
+&lt;p&gt;You can also generate the downgrade/upgrade SQL scripts for your database and manually run it against your database or just view the SQL queries that would be run by the downgrade/upgrade command.&lt;/p&gt;
+
+&lt;p&gt;More information can be found here: &lt;a href=&#34;https://airflow.apache.org/docs/apache-airflow/2.3.0/usage-cli.html#downgrading-airflow&#34; target=&#34;_blank&#34;&gt;Airflow &lt;code&gt;db downgrade&lt;/code&gt; and Offline generation of SQL scripts&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;reuse-of-decorated-tasks&#34;&gt;Reuse of decorated tasks&lt;/h2&gt;
+
+&lt;p&gt;You can now reuse decorated tasks across your dag files. A decorated task has an &lt;code&gt;override&lt;/code&gt; method that allows you to override it&amp;rsquo;s arguments.&lt;/p&gt;
+
+&lt;p&gt;Here&amp;rsquo;s an example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;@task
+def add_task(x, y):
+    print(f&amp;quot;Task args: x={x}, y={y}&amp;quot;)
+    return x + y
+
+
+@dag(start_date=datetime(2022, 1, 1))
+def mydag():
+    start = add_task.override(task_id=&amp;quot;start&amp;quot;)(1, 2)
+    for i in range(3):
+        start &amp;gt;&amp;gt; add_task.override(task_id=f&amp;quot;add_start_{i}&amp;quot;)(start, i)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;More information can be found here: &lt;a href=&#34;https://airflow.apache.org/docs/apache-airflow/2.3.0/tutorial_taskflow_api.html#reusing-a-decorated-task&#34; target=&#34;_blank&#34;&gt;Reuse of decorated DAGs&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;other-small-features&#34;&gt;Other small features&lt;/h2&gt;
+
+&lt;p&gt;This isn’t a comprehensive list, but some noteworthy or interesting small features include:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Support different timeout value for dag file parsing&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;airflow dags reserialize&lt;/code&gt; command to reserialize dags&lt;/li&gt;
+&lt;li&gt;Events Timetable&lt;/li&gt;
+&lt;li&gt;SmoothOperator - Operator that does literally nothing except logging a YouTube link to
+Sade&amp;rsquo;s &amp;ldquo;Smooth Operator&amp;rdquo;. Enjoy!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;contributors&#34;&gt;Contributors&lt;/h2&gt;
+
+&lt;p&gt;Thanks to everyone who contributed to this release: Ash Berlin-Taylor, Brent Bovenzi, Daniel Standish, Elad, Ephraim Anierobi, Jarek Potiuk, Jed Cunningham, Josh Fell, Kamil Breguła, Kanthi, Kaxil Naik, Khalid Mammadov, Malthe Borch, Ping Zhang, Tzu-ping Chung and many others who keep making Airflow better for everyone.&lt;/p&gt;
+
+      </description>
+    </item>
     
     <item>
       <title>Blog: What&#39;s new in Apache Airflow 2.2.0</title>

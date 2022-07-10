@@ -21,13 +21,21 @@
             <link rel="search" title="Search" href="../search.html" />
             <link rel="next" title="RDS management operators" href="rds.html" />
             <link rel="prev" title="AWS Glue Operators" href="glue.html" />
-    <script type="application/javascript">
-        var doNotTrack = false;
-        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-        ga('create', 'UA-140539454-1', 'auto');
-        ga('send', 'pageview');
-    </script>
-    <script async src='https://www.google-analytics.com/analytics.js'></script>
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  _paq.push(['disableCookies']);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://analytics.apache.org/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '13']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo -->
 
     
 </head><body class="td-section">
@@ -601,7 +609,7 @@ and only pay for what you use.</p>
 <p>To publish a message to an Amazon SNS Topic you can use
 <a class="reference internal" href="../_api/airflow/providers/amazon/aws/operators/aws_lambda/index.html#airflow.providers.amazon.aws.operators.aws_lambda.AwsLambdaInvokeFunctionOperator" title="airflow.providers.amazon.aws.operators.aws_lambda.AwsLambdaInvokeFunctionOperator"><code class="xref py py-class docutils literal notranslate"><span class="pre">AwsLambdaInvokeFunctionOperator</span></code></a>.</p>
 <div class="example-block-wrapper docutils container">
-<p class="example-header example-header--with-button"><span class="example-title">airflow/providers/amazon/aws/example_dags/example_lambda.py</span><a class="example-header-button viewcode-button reference internal" href="../_modules/airflow/providers/amazon/aws/example_dags/example_lambda.html"><span class="viewcode-link">[source]</span></a></p>
+<p class="example-header example-header--with-button"><span class="example-title">airflow/providers/amazon/aws/example_dags/example_lambda.py</span><a class="example-header-button viewcode-button reference internal" href="https://github.com/apache/airflow/tree/providers-amazon/3.3.0/airflow/providers/amazon/aws/example_dags/example_lambda.py" target="_blank"><span class="viewcode-link">[source]</span></a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">invoke_lambda_function</span> <span class="o">=</span> <span class="n">AwsLambdaInvokeFunctionOperator</span><span class="p">(</span>
     <span class="n">task_id</span><span class="o">=</span><span class="s1">&#39;setup__invoke_lambda_function&#39;</span><span class="p">,</span>
     <span class="n">function_name</span><span class="o">=</span><span class="n">LAMBDA_FUNCTION_NAME</span><span class="p">,</span>

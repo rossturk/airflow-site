@@ -47,17 +47,6 @@
 <meta name="twitter:description" content="Platform created by the community to programmatically author, schedule and monitor workflows."/>
 
 
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-140539454-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
 
 
 
@@ -82,10 +71,28 @@ if (!doNotTrack) {
 
 
 
-<link rel="preload" href="/main.26eab.js" as="script">
-<link rel="preload" href="/chunk-1.26eab.js" as="script">
+<script>
+    var _paq = window._paq = window._paq || [];
+     
+     
+    _paq.push(['disableCookies']);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+        var u="https://analytics.apache.org/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '13']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+</script>
 
-<link rel="preload" href="/chunk-4.26eab.js" as="script">
+
+
+<link rel="preload" href="/main.3d5f5.js" as="script">
+<link rel="preload" href="/chunk-1.3d5f5.js" as="script">
+
+<link rel="preload" href="/chunk-4.3d5f5.js" as="script">
 
 
 
@@ -1226,12 +1233,12 @@ if (!doNotTrack) {
             <div id="integrations-container" class="list-items">
                 
                 
-                <a class="list-item" href="/docs/apache-airflow-providers-amazon/stable/index.html">
+                <a class="list-item" href="/docs/apache-airflow-providers-jdbc/stable/operators.html">
                     
 
 <div class="card">
     <div class="box-event box-event__integration">
-        <span class="box-event__integration--name">Amazon Athena</span>
+        <span class="box-event__integration--name">Java Database Connectivity (JDBC)</span>
     </div>
 </div>
 
@@ -1239,12 +1246,12 @@ if (!doNotTrack) {
                 
                 
                 
-                <a class="list-item" href="/docs/apache-airflow-providers-amazon/stable/index.html">
+                <a class="list-item" href="/docs/apache-airflow-providers-amazon/stable/operators/s3.html">
                     
 
 <div class="card">
     <div class="box-event box-event__integration">
-        <span class="box-event__integration--name">Amazon SageMaker</span>
+        <span class="box-event__integration--name">Amazon Simple Storage Service (S3)</span>
     </div>
 </div>
 
@@ -1252,12 +1259,12 @@ if (!doNotTrack) {
                 
                 
                 
-                <a class="list-item" href="/docs/apache-airflow-providers-dingding/stable/operators.html">
+                <a class="list-item" href="/docs/apache-airflow-providers-apache-pinot/stable/index.html">
                     
 
 <div class="card">
     <div class="box-event box-event__integration">
-        <span class="box-event__integration--name">Dingding</span>
+        <span class="box-event__integration--name">Apache Pinot</span>
     </div>
 </div>
 
@@ -1265,12 +1272,12 @@ if (!doNotTrack) {
                 
                 
                 
-                <a class="list-item" href="/docs/apache-airflow-providers-amazon/stable/index.html">
+                <a class="list-item" href="/docs/apache-airflow-providers-zendesk/stable/index.html">
                     
 
 <div class="card">
     <div class="box-event box-event__integration">
-        <span class="box-event__integration--name">Amazon ElastiCache</span>
+        <span class="box-event__integration--name">Zendesk</span>
     </div>
 </div>
 
@@ -1278,12 +1285,12 @@ if (!doNotTrack) {
                 
                 
                 
-                <a class="list-item" href="/docs/apache-airflow-providers-ftp/stable/index.html">
+                <a class="list-item" href="/docs/apache-airflow-providers-google/stable/operators/cloud/compute.html">
                     
 
 <div class="card">
     <div class="box-event box-event__integration">
-        <span class="box-event__integration--name">File Transfer Protocol (FTP)</span>
+        <span class="box-event__integration--name">Google Compute Engine</span>
     </div>
 </div>
 
@@ -1291,12 +1298,12 @@ if (!doNotTrack) {
                 
                 
                 
-                <a class="list-item" href="/docs/apache-airflow-providers-google/stable/operators/cloud/dataprep.html">
+                <a class="list-item" href="/docs/apache-airflow-providers-google/stable/operators/cloud/video_intelligence.html">
                     
 
 <div class="card">
     <div class="box-event box-event__integration">
-        <span class="box-event__integration--name">Google Dataprep</span>
+        <span class="box-event__integration--name">Google Cloud Video Intelligence</span>
     </div>
 </div>
 
@@ -1304,12 +1311,12 @@ if (!doNotTrack) {
                 
                 
                 
-                <a class="list-item" href="/docs/apache-airflow-providers-sqlite/stable/index.html">
+                <a class="list-item" href="/docs/apache-airflow-providers-plexus/stable/index.html">
                     
 
 <div class="card">
     <div class="box-event box-event__integration">
-        <span class="box-event__integration--name">SQLite</span>
+        <span class="box-event__integration--name">Plexus</span>
     </div>
 </div>
 
@@ -1317,16 +1324,78 @@ if (!doNotTrack) {
                 
                 
                 
-                <a class="list-item" href="/docs/apache-airflow-providers-amazon/stable/index.html">
+                <a class="list-item" href="/docs/apache-airflow-providers-apache-hdfs/stable/operators/hdfs.html">
                     
 
 <div class="card">
     <div class="box-event box-event__integration">
-        <span class="box-event__integration--name">Amazon EC2</span>
+        <span class="box-event__integration--name">Hadoop Distributed File System (HDFS)</span>
     </div>
 </div>
 
                 </a>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 
                 
                 
@@ -1780,6 +1849,6 @@ if (!doNotTrack) {
 
 </body>
 
-    <script src="/main.26eab.js"></script>
+    <script src="/main.3d5f5.js"></script>
 
 </html>

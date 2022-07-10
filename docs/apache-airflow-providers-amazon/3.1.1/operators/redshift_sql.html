@@ -21,13 +21,21 @@
             <link rel="search" title="Search" href="../search.html" />
             <link rel="next" title="Amazon S3 Operators" href="s3.html" />
             <link rel="prev" title="Amazon Redshift Data Operators" href="redshift_data.html" />
-    <script type="application/javascript">
-        var doNotTrack = false;
-        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-        ga('create', 'UA-140539454-1', 'auto');
-        ga('send', 'pageview');
-    </script>
-    <script async src='https://www.google-analytics.com/analytics.js'></script>
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  _paq.push(['disableCookies']);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://analytics.apache.org/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '13']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo -->
 
     
 </head><body class="td-section">
@@ -615,7 +623,7 @@ business and customers.</p>
 <div class="section" id="execute-a-sql-query">
 <h3>Execute a SQL query<a class="headerlink" href="#execute-a-sql-query" title="Permalink to this headline">¶</a></h3>
 <div class="example-block-wrapper docutils container">
-<p class="example-header example-header--with-button"><span class="example-title">airflow/providers/amazon/aws/example_dags/example_redshift_sql.py</span><a class="example-header-button viewcode-button reference internal" href="../_modules/airflow/providers/amazon/aws/example_dags/example_redshift_sql.html"><span class="viewcode-link">[source]</span></a></p>
+<p class="example-header example-header--with-button"><span class="example-title">airflow/providers/amazon/aws/example_dags/example_redshift_sql.py</span><a class="example-header-button viewcode-button reference internal" href="https://github.com/apache/airflow/tree/providers-amazon/3.1.1/airflow/providers/amazon/aws/example_dags/example_redshift_sql.py" target="_blank"><span class="viewcode-link">[source]</span></a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">task_select_data</span> <span class="o">=</span> <span class="n">RedshiftSQLOperator</span><span class="p">(</span>
     <span class="n">task_id</span><span class="o">=</span><span class="s1">&#39;task_get_all_table_data&#39;</span><span class="p">,</span> <span class="n">sql</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;CREATE TABLE more_fruit AS SELECT * FROM fruit;&quot;&quot;&quot;</span>
 <span class="p">)</span>
@@ -628,7 +636,7 @@ business and customers.</p>
 <p>RedshiftSQLOperator supports the <code class="docutils literal notranslate"><span class="pre">parameters</span></code> attribute which allows us to dynamically pass
 parameters into SQL statements.</p>
 <div class="example-block-wrapper docutils container">
-<p class="example-header example-header--with-button"><span class="example-title">airflow/providers/amazon/aws/example_dags/example_redshift_sql.py</span><a class="example-header-button viewcode-button reference internal" href="../_modules/airflow/providers/amazon/aws/example_dags/example_redshift_sql.html"><span class="viewcode-link">[source]</span></a></p>
+<p class="example-header example-header--with-button"><span class="example-title">airflow/providers/amazon/aws/example_dags/example_redshift_sql.py</span><a class="example-header-button viewcode-button reference internal" href="https://github.com/apache/airflow/tree/providers-amazon/3.1.1/airflow/providers/amazon/aws/example_dags/example_redshift_sql.py" target="_blank"><span class="viewcode-link">[source]</span></a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">task_select_filtered_data</span> <span class="o">=</span> <span class="n">RedshiftSQLOperator</span><span class="p">(</span>
     <span class="n">task_id</span><span class="o">=</span><span class="s1">&#39;task_get_filtered_table_data&#39;</span><span class="p">,</span>
     <span class="n">sql</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;CREATE TABLE filtered_fruit AS SELECT * FROM fruit WHERE color = &#39;{{ params.color }}&#39;;&quot;&quot;&quot;</span><span class="p">,</span>

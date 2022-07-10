@@ -21,13 +21,21 @@
             <link rel="search" title="Search" href="../search.html" />
             <link rel="next" title="Amazon Simple Notification Service (SNS) Operators" href="sns.html" />
             <link rel="prev" title="Amazon S3 Operators" href="s3.html" />
-    <script type="application/javascript">
-        var doNotTrack = false;
-        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-        ga('create', 'UA-140539454-1', 'auto');
-        ga('send', 'pageview');
-    </script>
-    <script async src='https://www.google-analytics.com/analytics.js'></script>
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  _paq.push(['disableCookies']);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://analytics.apache.org/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '13']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo -->
 
     
 </head><body class="td-section">
@@ -632,7 +640,7 @@ generate the models artifact in s3, create the model,
 training, Sagemaker Model, batch transform job and
 then delete the model.</p>
 <div class="example-block-wrapper docutils container">
-<p class="example-header example-header--with-button"><span class="example-title">airflow/providers/amazon/aws/example_dags/example_sagemaker.py</span><a class="example-header-button viewcode-button reference internal" href="../_modules/airflow/providers/amazon/aws/example_dags/example_sagemaker.html"><span class="viewcode-link">[source]</span></a></p>
+<p class="example-header example-header--with-button"><span class="example-title">airflow/providers/amazon/aws/example_dags/example_sagemaker.py</span><a class="example-header-button viewcode-button reference internal" href="https://github.com/apache/airflow/tree/providers-amazon/3.3.0/airflow/providers/amazon/aws/example_dags/example_sagemaker.py" target="_blank"><span class="viewcode-link">[source]</span></a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">DAG</span><span class="p">(</span>
     <span class="s2">&quot;sample_sagemaker_dag&quot;</span><span class="p">,</span>
     <span class="n">schedule_interval</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>

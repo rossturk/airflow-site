@@ -21,13 +21,21 @@
             <link rel="search" title="Search" href="../search.html" />
             <link rel="next" title="Azure Blob Storage Transfer Operator" href="sftp_to_wasb.html" />
             <link rel="prev" title="Azure Blob Storage Transfer Operator" href="azure_blob_to_gcs.html" />
-    <script type="application/javascript">
-        var doNotTrack = false;
-        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-        ga('create', 'UA-140539454-1', 'auto');
-        ga('send', 'pageview');
-    </script>
-    <script async src='https://www.google-analytics.com/analytics.js'></script>
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  _paq.push(['disableCookies']);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://analytics.apache.org/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '13']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo -->
 
     
 </head><body class="td-section">
@@ -597,7 +605,7 @@ This page shows how to upload data from local filesystem to ADL.</p>
 upload data from local filesystem to ADL.</p>
 <p>Below is an example of using this operator to upload a file to ADL.</p>
 <div class="example-block-wrapper docutils container">
-<p class="example-header example-header--with-button"><span class="example-title">airflow/providers/microsoft/azure/example_dags/example_local_to_adls.py</span><a class="example-header-button viewcode-button reference internal" href="../_modules/airflow/providers/microsoft/azure/example_dags/example_local_to_adls.html"><span class="viewcode-link">[source]</span></a></p>
+<p class="example-header example-header--with-button"><span class="example-title">airflow/providers/microsoft/azure/example_dags/example_local_to_adls.py</span><a class="example-header-button viewcode-button reference internal" href="https://github.com/apache/airflow/tree/providers-microsoft-azure/3.7.0/airflow/providers/microsoft/azure/example_dags/example_local_to_adls.py" target="_blank"><span class="viewcode-link">[source]</span></a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">upload_file</span> <span class="o">=</span> <span class="n">LocalFilesystemToADLSOperator</span><span class="p">(</span>
         <span class="n">task_id</span><span class="o">=</span><span class="s1">&#39;upload_task&#39;</span><span class="p">,</span>
         <span class="n">local_path</span><span class="o">=</span><span class="n">LOCAL_FILE_PATH</span><span class="p">,</span>
