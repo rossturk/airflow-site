@@ -20,6 +20,7 @@ set -euo pipefail
 
 
 MY_DIR="$(cd "$(dirname "$0")" && pwd)"
+echo "MY_DIR: ${MY_DIR}"
 
 function log {
     echo -e "$(date +'%Y-%m-%d %H:%M:%S'):INFO: ${*} " >&2;
