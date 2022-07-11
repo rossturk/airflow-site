@@ -222,9 +222,9 @@ function prepare_theme {
     SITE_DIST="${MY_DIR}/landing-pages/dist"
     THEME_GEN="${MY_DIR}/sphinx_airflow_theme/sphinx_airflow_theme/static/_gen"
     mkdir -p "${THEME_GEN}/css" "${THEME_GEN}/js"
-    cp "${SITE_DIST}/docs.*.js" "${THEME_GEN}/js/docs.js"
-    cp "${SITE_DIST}/scss/main.min.*.css" "${THEME_GEN}/css/main.min.css"
-    cp "${SITE_DIST}/scss/main-custom.min.*.css" "${THEME_GEN}/css/main-custom.min.css"
+    cp "${SITE_DIST}"/docs.*.js "${THEME_GEN}/js/docs.js"
+    cp "${SITE_DIST}"/scss/main.min.*.css "${THEME_GEN}/css/main.min.css"
+    cp "${SITE_DIST}"/scss/main-custom.min.*.css "${THEME_GEN}/css/main-custom.min.css"
     echo "Successful copied required files"
 }
 
