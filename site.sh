@@ -20,7 +20,6 @@ set -euo pipefail
 
 
 MY_DIR="$(cd "$(dirname "$0")" && pwd)"
-pushd "${MY_DIR}" &>/dev/null || exit 1
 
 function log {
     echo -e "$(date +'%Y-%m-%d %H:%M:%S'):INFO: ${*} " >&2;
@@ -50,7 +49,7 @@ EOF
 
 function ensure_node_module_exists {
     log "Checking if node module exists"
-    if [[ ! -d landing-pages/node_modules/ ]] ; then
+    if [[ ! -d ${MY_DIR}/landing-pages/node_modules/ ]] ; then
         log "Missing node dependencies. Start installation."
         run_command "./landing-pages/" yarn install
         log "Dependencies installed."
@@ -58,11 +57,11 @@ function ensure_node_module_exists {
 }
 
 function ensure_that_website_is_build {
-    log "Check if landing-pages/dist/index.html file exists"
-    if [[ ! -f landing-pages/dist/index.html ]] ; then
+    log "Check if ${MY_DIR}/landing-pages/dist/index.html file exists"
+    if [[ ! -f ${MY_DIR}/landing-pages/dist/index.html ]] ; then
         log "The website is not built. Start building."
-        run_command "./landing-pages/" yarn run build
-        log "The website builded."
+        run_command "${MY_DIR}/landing-pages/" yarn run build
+        log "The website built."
     fi
 }
 
@@ -84,15 +83,14 @@ function run_lint {
 
 function prepare_packages_metadata {
     log "Preparing packages-metadata.json"
-    ./dump-docs-packages-metadata.py > "landing-pages/site/static/_gen/packages-metadata.json"
+    "${MY_DIR}"/dump-docs-packages-metadata.py > "${MY_DIR}/landing-pages/site/static/_gen/packages-metadata.json"
 }
 
 function build_landing_pages {
     log "Building landing pages"
-    run_command "./landing-pages/" yarn run index
-    echo "foo"
+    run_command "${MY_DIR}/landing-pages/" yarn run index
     prepare_packages_metadata
-    run_command "./landing-pages/" yarn run build
+    run_command "${MY_DIR}/landing-pages/" yarn run build
 }
 
 function create_redirect {
@@ -128,9 +126,12 @@ function assert_file_exists {
 function build_site {
     log "Building full site"
 
-    if [[ ! -f "landing-pages/dist/index.html" ]]; then
+    if [[ ! -f "${MY_DIR}/landing-pages/dist/index.html" ]]; then
         build_landing_pages
     fi
+
+    pushd "${MY_DIR}" &>/dev/null || exit 1
+
     mkdir -p dist
     rm -rf dist/*
     verbose_copy landing-pages/dist/. dist/
@@ -156,27 +157,30 @@ function build_site {
             verbose_copy "docs-archive/${package_name}/." "dist/docs/${package_name}/"
         fi
     done
+
+    popd &>/dev/null || exit 1
+
     # This file may already have been created during building landing pages,
     # but when building a full site, it's worth regenerate
     log "Preparing packages-metadata.json"
-    ./dump-docs-packages-metadata.py > "dist/_gen/packages-metadata.json"
+    "${MY_DIR}"/dump-docs-packages-metadata.py > "${MY_DIR}/dist/_gen/packages-metadata.json"
 
     # Sanity checks
-    assert_file_exists dist/docs/index.html
-    assert_file_exists dist/docs/apache-airflow/index.html
-    assert_file_exists dist/docs/apache-airflow/1.10.7/tutorial.html
-    assert_file_exists dist/docs/apache-airflow/stable/tutorial.html
-    assert_file_exists dist/_gen/packages-metadata.json
+    assert_file_exists "${MY_DIR}"/dist/docs/index.html
+    assert_file_exists "${MY_DIR}"/dist/docs/apache-airflow/index.html
+    assert_file_exists "${MY_DIR}"/dist/docs/apache-airflow/1.10.7/tutorial.html
+    assert_file_exists "${MY_DIR}"/dist/docs/apache-airflow/stable/tutorial.html
+    assert_file_exists "${MY_DIR}"/dist/_gen/packages-metadata.json
 }
 
 function prepare_theme {
     log "Preparing theme files"
-    SITE_DIST="landing-pages/dist"
-    THEME_GEN="sphinx_airflow_theme/sphinx_airflow_theme/static/_gen"
+    SITE_DIST="${MY_DIR}/landing-pages/dist"
+    THEME_GEN="${MY_DIR}/sphinx_airflow_theme/sphinx_airflow_theme/static/_gen"
     mkdir -p "${THEME_GEN}/css" "${THEME_GEN}/js"
-    cp ${SITE_DIST}/docs.*.js "${THEME_GEN}/js/docs.js"
-    cp ${SITE_DIST}/scss/main.min.*.css "${THEME_GEN}/css/main.min.css"
-    cp ${SITE_DIST}/scss/main-custom.min.*.css "${THEME_GEN}/css/main-custom.min.css"
+    cp "${SITE_DIST}/docs.*.js" "${THEME_GEN}/js/docs.js"
+    cp "${SITE_DIST}/scss/main.min.*.css" "${THEME_GEN}/css/main.min.css"
+    cp "${SITE_DIST}/scss/main-custom.min.*.css" "${THEME_GEN}/css/main-custom.min.css"
     echo "Successful copied required files"
 }
 
@@ -193,10 +197,10 @@ shift
 
 # Check commands
 if [[ "${CMD}" == "install-node-deps" ]] ; then
-    run_command "./landing-pages/" yarn install
+    run_command "${MY_DIR}/landing-pages/" yarn install
 elif [[ "${CMD}" == "preview-landing-pages" ]]; then
     ensure_node_module_exists
-    run_command "./landing-pages/" yarn run index
+    run_command "${MY_DIR}/landing-pages/" yarn run index
     prepare_packages_metadata
     run_command "./landing-pages/" yarn run preview
 elif [[ "${CMD}" == "build-landing-pages" ]]; then
@@ -208,27 +212,25 @@ elif [[ "${CMD}" == "build-site" ]]; then
 elif [[ "${CMD}" == "check-site-links" ]]; then
     ensure_node_module_exists
     ensure_that_website_is_build
-    run_command "./landing-pages/" ./check-links.sh
+    run_command "${MY_DIR}/landing-pages/" ./check-links.sh
 elif [[ "${CMD}" == "prepare-theme" ]]; then
     ensure_that_website_is_build
     prepare_theme
 elif [[ "${CMD}" == "lint-js" ]]; then
     ensure_node_module_exists
     if [[ "$#" -eq 0 ]]; then
-        run_command "./landing-pages/" yarn run lint:js
+        run_command "${MY_DIR}/landing-pages/" yarn run lint:js
     else
-        run_lint "./landing-pages/" ./node_modules/.bin/eslint "$@"
+        run_lint "${MY_DIR}/landing-pages/" ./node_modules/.bin/eslint "$@"
     fi
 elif [[ "${CMD}" == "lint-css" ]]; then
     ensure_node_module_exists
     if [[ "$#" -eq 0 ]]; then
-        run_command "./landing-pages/" yarn run lint:css
+        run_command "${MY_DIR}/landing-pages/" yarn run lint:css
     else
-        run_lint "./landing-pages/" ./node_modules/.bin/stylelint "$@"
+        run_lint "${MY_DIR}/landing-pages/" ./node_modules/.bin/stylelint "$@"
     fi
 else
     usage
     exit 0
 fi
-
-popd &>/dev/null || exit 1
