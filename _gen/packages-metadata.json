@@ -1,70 +1,15 @@
 [
   {
-    "package-name": "apache-airflow-providers-neo4j",
+    "package-name": "apache-airflow-providers-mysql",
     "stable-version": "3.0.0",
     "all-versions": [
       "1.0.0",
       "1.0.1",
-      "2.0.0",
-      "2.0.1",
-      "2.0.2",
-      "2.1.0",
-      "2.1.1",
-      "2.1.2",
-      "2.1.3",
-      "3.0.0"
-    ]
-  },
-  {
-    "package-name": "apache-airflow-providers-apache-sqoop",
-    "stable-version": "3.0.0",
-    "all-versions": [
-      "1.0.0",
-      "1.0.1",
-      "2.0.0",
-      "2.0.1",
-      "2.0.2",
-      "2.1.0",
-      "2.1.1",
-      "2.1.2",
-      "2.1.3",
-      "3.0.0"
-    ]
-  },
-  {
-    "package-name": "apache-airflow-providers-microsoft-azure",
-    "stable-version": "4.0.0",
-    "all-versions": [
-      "1.0.0",
-      "1.1.0",
-      "1.2.0",
-      "1.3.0",
-      "2.0.0",
-      "3.0.0",
-      "3.1.0",
-      "3.1.1",
-      "3.2.0",
-      "3.3.0",
-      "3.4.0",
-      "3.5.0",
-      "3.6.0",
-      "3.7.0",
-      "3.7.1",
-      "3.7.2",
-      "3.8.0",
-      "3.9.0",
-      "4.0.0"
-    ]
-  },
-  {
-    "package-name": "apache-airflow-providers-apache-livy",
-    "stable-version": "3.0.0",
-    "all-versions": [
-      "1.0.0",
-      "1.0.1",
+      "1.0.2",
       "1.1.0",
       "2.0.0",
       "2.1.0",
+      "2.1.1",
       "2.2.0",
       "2.2.1",
       "2.2.2",
@@ -73,16 +18,97 @@
     ]
   },
   {
-    "package-name": "apache-airflow-providers-datadog",
+    "package-name": "apache-airflow-providers-elasticsearch",
+    "stable-version": "4.0.0",
+    "all-versions": [
+      "1.0.0",
+      "1.0.1",
+      "1.0.2",
+      "1.0.3",
+      "1.0.4",
+      "2.0.1",
+      "2.0.2",
+      "2.0.3",
+      "2.1.0",
+      "2.2.0",
+      "3.0.0",
+      "3.0.1",
+      "3.0.2",
+      "3.0.3",
+      "4.0.0"
+    ]
+  },
+  {
+    "package-name": "apache-airflow-providers-cncf-kubernetes",
+    "stable-version": "4.1.0",
+    "all-versions": [
+      "1.0.0",
+      "1.0.1",
+      "1.0.2",
+      "1.1.0",
+      "1.2.0",
+      "2.0.0",
+      "2.0.1",
+      "2.0.2",
+      "2.0.3",
+      "2.1.0",
+      "2.2.0",
+      "3.0.0",
+      "3.0.1",
+      "3.0.2",
+      "3.1.0",
+      "3.1.1",
+      "3.1.2",
+      "4.0.0",
+      "4.0.1",
+      "4.0.2",
+      "4.1.0"
+    ]
+  },
+  {
+    "package-name": "apache-airflow-providers-jira",
     "stable-version": "3.0.0",
     "all-versions": [
       "1.0.0",
       "1.0.1",
+      "1.0.2",
       "2.0.0",
       "2.0.1",
       "2.0.2",
       "2.0.3",
       "2.0.4",
+      "2.0.5",
+      "3.0.0"
+    ]
+  },
+  {
+    "package-name": "apache-airflow-providers-celery",
+    "stable-version": "3.0.0",
+    "all-versions": [
+      "1.0.0",
+      "1.0.1",
+      "2.0.0",
+      "2.1.0",
+      "2.1.1",
+      "2.1.2",
+      "2.1.3",
+      "2.1.4",
+      "3.0.0"
+    ]
+  },
+  {
+    "package-name": "apache-airflow-providers-apache-hdfs",
+    "stable-version": "3.0.0",
+    "all-versions": [
+      "1.0.0",
+      "1.0.1",
+      "2.0.0",
+      "2.1.0",
+      "2.1.1",
+      "2.2.0",
+      "2.2.1",
+      "2.2.2",
+      "2.2.3",
       "3.0.0"
     ]
   },
@@ -101,58 +127,63 @@
     ]
   },
   {
-    "package-name": "apache-airflow-providers-oracle",
-    "stable-version": "3.1.0",
+    "package-name": "apache-airflow-providers-segment",
+    "stable-version": "3.0.0",
+    "all-versions": [
+      "1.0.0",
+      "1.0.1",
+      "2.0.0",
+      "2.0.1",
+      "2.0.2",
+      "2.0.3",
+      "2.0.4",
+      "3.0.0"
+    ]
+  },
+  {
+    "package-name": "apache-airflow-providers-qubole",
+    "stable-version": "3.0.0",
+    "all-versions": [
+      "1.0.0",
+      "1.0.1",
+      "1.0.2",
+      "2.0.0",
+      "2.0.1",
+      "2.1.0",
+      "2.1.1",
+      "2.1.2",
+      "2.1.3",
+      "3.0.0"
+    ]
+  },
+  {
+    "package-name": "apache-airflow-providers-jdbc",
+    "stable-version": "3.0.0",
+    "all-versions": [
+      "1.0.0",
+      "1.0.1",
+      "2.0.0",
+      "2.0.1",
+      "2.1.0",
+      "2.1.1",
+      "2.1.2",
+      "2.1.3",
+      "3.0.0"
+    ]
+  },
+  {
+    "package-name": "apache-airflow-providers-grpc",
+    "stable-version": "3.0.0",
     "all-versions": [
       "1.0.0",
       "1.0.1",
       "1.1.0",
       "2.0.0",
       "2.0.1",
-      "2.1.0",
-      "2.2.0",
-      "2.2.1",
-      "2.2.2",
-      "2.2.3",
-      "3.0.0",
-      "3.1.0"
-    ]
-  },
-  {
-    "package-name": "apache-airflow-providers-airbyte",
-    "stable-version": "3.0.0",
-    "all-versions": [
-      "1.0.0",
-      "2.0.0",
-      "2.1.0",
-      "2.1.1",
-      "2.1.2",
-      "2.1.3",
-      "2.1.4",
+      "2.0.2",
+      "2.0.3",
+      "2.0.4",
       "3.0.0"
-    ]
-  },
-  {
-    "package-name": "apache-airflow-providers-apache-drill",
-    "stable-version": "2.0.0",
-    "all-versions": [
-      "1.0.0",
-      "1.0.1",
-      "1.0.2",
-      "1.0.3",
-      "1.0.4",
-      "2.0.0"
-    ]
-  },
-  {
-    "package-name": "apache-airflow-providers-github",
-    "stable-version": "2.0.0",
-    "all-versions": [
-      "1.0.0",
-      "1.0.1",
-      "1.0.2",
-      "1.0.3",
-      "2.0.0"
     ]
   },
   {
@@ -180,7 +211,7 @@
     ]
   },
   {
-    "package-name": "apache-airflow-providers-jenkins",
+    "package-name": "apache-airflow-providers-microsoft-mssql",
     "stable-version": "3.0.0",
     "all-versions": [
       "1.0.0",
@@ -188,13 +219,100 @@
       "1.1.0",
       "2.0.0",
       "2.0.1",
+      "2.1.0",
+      "2.1.1",
+      "2.1.2",
+      "2.1.3",
+      "3.0.0"
+    ]
+  },
+  {
+    "package-name": "apache-airflow-providers-facebook",
+    "stable-version": "3.0.0",
+    "all-versions": [
+      "1.0.0",
+      "1.0.1",
+      "1.1.0",
+      "2.0.0",
+      "2.0.1",
+      "2.1.0",
+      "2.2.0",
+      "2.2.1",
+      "2.2.2",
+      "2.2.3",
+      "3.0.0"
+    ]
+  },
+  {
+    "package-name": "apache-airflow-providers-neo4j",
+    "stable-version": "3.0.0",
+    "all-versions": [
+      "1.0.0",
+      "1.0.1",
+      "2.0.0",
+      "2.0.1",
+      "2.0.2",
+      "2.1.0",
+      "2.1.1",
+      "2.1.2",
+      "2.1.3",
+      "3.0.0"
+    ]
+  },
+  {
+    "package-name": "apache-airflow-providers-apache-hive",
+    "stable-version": "3.0.0",
+    "all-versions": [
+      "1.0.0",
+      "1.0.1",
+      "1.0.2",
+      "1.0.3",
+      "2.0.0",
+      "2.0.1",
+      "2.0.2",
+      "2.0.3",
+      "2.1.0",
+      "2.2.0",
+      "2.3.0",
+      "2.3.1",
+      "2.3.2",
+      "2.3.3",
+      "3.0.0"
+    ]
+  },
+  {
+    "package-name": "helm-chart",
+    "stable-version": "1.6.0",
+    "all-versions": [
+      "1.0.0",
+      "1.1.0",
+      "1.2.0",
+      "1.3.0",
+      "1.4.0",
+      "1.5.0",
+      "1.6.0"
+    ]
+  },
+  {
+    "package-name": "apache-airflow-providers-dbt-cloud",
+    "stable-version": "2.0.0",
+    "all-versions": [
+      "1.0.1",
+      "1.0.2",
+      "2.0.0"
+    ]
+  },
+  {
+    "package-name": "apache-airflow-providers-apache-pig",
+    "stable-version": "3.0.0",
+    "all-versions": [
+      "1.0.0",
+      "1.0.1",
+      "2.0.0",
+      "2.0.1",
       "2.0.2",
       "2.0.3",
       "2.0.4",
-      "2.0.5",
-      "2.0.6",
-      "2.0.7",
-      "2.1.0",
       "3.0.0"
     ]
   },
@@ -214,28 +332,40 @@
     ]
   },
   {
-    "package-name": "apache-airflow-providers-slack",
-    "stable-version": "5.0.0",
+    "package-name": "apache-airflow-providers-github",
+    "stable-version": "2.0.0",
     "all-versions": [
       "1.0.0",
-      "2.0.0",
-      "3.0.0",
-      "4.0.0",
-      "4.0.1",
-      "4.1.0",
-      "4.2.0",
-      "4.2.1",
-      "4.2.2",
-      "4.2.3",
-      "5.0.0"
+      "1.0.1",
+      "1.0.2",
+      "1.0.3",
+      "2.0.0"
     ]
   },
   {
-    "package-name": "apache-airflow-providers-dbt-cloud",
+    "package-name": "apache-airflow-providers-ftp",
+    "stable-version": "3.0.0",
+    "all-versions": [
+      "1.0.0",
+      "1.0.1",
+      "1.1.0",
+      "2.0.0",
+      "2.0.1",
+      "2.1.0",
+      "2.1.1",
+      "2.1.2",
+      "3.0.0"
+    ]
+  },
+  {
+    "package-name": "apache-airflow-providers-influxdb",
     "stable-version": "2.0.0",
     "all-versions": [
-      "1.0.1",
-      "1.0.2",
+      "1.0.0",
+      "1.1.0",
+      "1.1.1",
+      "1.1.2",
+      "1.1.3",
       "2.0.0"
     ]
   },
@@ -259,73 +389,6 @@
     ]
   },
   {
-    "package-name": "apache-airflow-providers-databricks",
-    "stable-version": "3.0.0",
-    "all-versions": [
-      "1.0.0",
-      "1.0.1",
-      "2.0.0",
-      "2.0.1",
-      "2.0.2",
-      "2.1.0",
-      "2.2.0",
-      "2.3.0",
-      "2.4.0",
-      "2.5.0",
-      "2.6.0",
-      "2.7.0",
-      "3.0.0"
-    ]
-  },
-  {
-    "package-name": "apache-airflow-providers-qubole",
-    "stable-version": "3.0.0",
-    "all-versions": [
-      "1.0.0",
-      "1.0.1",
-      "1.0.2",
-      "2.0.0",
-      "2.0.1",
-      "2.1.0",
-      "2.1.1",
-      "2.1.2",
-      "2.1.3",
-      "3.0.0"
-    ]
-  },
-  {
-    "package-name": "apache-airflow-providers-apache-beam",
-    "stable-version": "4.0.0",
-    "all-versions": [
-      "1.0.0",
-      "1.0.1",
-      "2.0.0",
-      "3.0.0",
-      "3.0.1",
-      "3.1.0",
-      "3.2.0",
-      "3.2.1",
-      "3.3.0",
-      "3.4.0",
-      "4.0.0"
-    ]
-  },
-  {
-    "package-name": "apache-airflow-providers-telegram",
-    "stable-version": "3.0.0",
-    "all-versions": [
-      "1.0.0",
-      "1.0.1",
-      "1.0.2",
-      "2.0.0",
-      "2.0.1",
-      "2.0.2",
-      "2.0.3",
-      "2.0.4",
-      "3.0.0"
-    ]
-  },
-  {
     "package-name": "apache-airflow-providers-hashicorp",
     "stable-version": "3.0.0",
     "all-versions": [
@@ -342,68 +405,129 @@
     ]
   },
   {
-    "package-name": "apache-airflow-providers-odbc",
-    "stable-version": "3.0.0",
+    "package-name": "apache-airflow-providers-asana",
+    "stable-version": "2.0.0",
     "all-versions": [
       "1.0.0",
-      "1.0.1",
-      "2.0.0",
-      "2.0.1",
-      "2.0.2",
-      "2.0.3",
-      "2.0.4",
-      "3.0.0"
-    ]
-  },
-  {
-    "package-name": "apache-airflow-providers-apache-kylin",
-    "stable-version": "3.0.0",
-    "all-versions": [
-      "1.0.0",
-      "1.0.1",
-      "2.0.0",
-      "2.0.1",
-      "2.0.2",
-      "2.0.3",
-      "2.0.4",
-      "3.0.0"
-    ]
-  },
-  {
-    "package-name": "apache-airflow-providers-salesforce",
-    "stable-version": "4.0.0",
-    "all-versions": [
-      "1.0.0",
-      "1.0.1",
-      "2.0.0",
-      "3.0.0",
-      "3.1.0",
-      "3.2.0",
-      "3.3.0",
-      "3.4.0",
-      "3.4.1",
-      "3.4.2",
-      "3.4.3",
-      "3.4.4",
-      "4.0.0"
-    ]
-  },
-  {
-    "package-name": "apache-airflow-providers-apache-druid",
-    "stable-version": "3.0.0",
-    "all-versions": [
-      "1.0.0",
-      "1.0.1",
       "1.1.0",
+      "1.1.1",
+      "1.1.2",
+      "1.1.3",
+      "2.0.0"
+    ]
+  },
+  {
+    "package-name": "apache-airflow-providers-papermill",
+    "stable-version": "3.0.0",
+    "all-versions": [
+      "1.0.0",
+      "1.0.1",
+      "1.0.2",
+      "2.0.0",
+      "2.0.1",
+      "2.1.0",
+      "2.2.0",
+      "2.2.1",
+      "2.2.2",
+      "2.2.3",
+      "3.0.0"
+    ]
+  },
+  {
+    "package-name": "apache-airflow-providers-discord",
+    "stable-version": "3.0.0",
+    "all-versions": [
+      "1.0.0",
+      "1.0.1",
+      "2.0.0",
+      "2.0.1",
+      "2.0.2",
+      "2.0.3",
+      "2.0.4",
+      "2.1.4",
+      "3.0.0"
+    ]
+  },
+  {
+    "package-name": "apache-airflow-providers-sqlite",
+    "stable-version": "3.0.0",
+    "all-versions": [
+      "1.0.0",
+      "1.0.1",
+      "1.0.2",
+      "2.0.0",
+      "2.0.1",
+      "2.1.0",
+      "2.1.1",
+      "2.1.2",
+      "2.1.3",
+      "3.0.0"
+    ]
+  },
+  {
+    "package-name": "apache-airflow-providers-trino",
+    "stable-version": "3.0.0",
+    "all-versions": [
+      "1.0.0",
       "2.0.0",
       "2.0.1",
       "2.0.2",
       "2.1.0",
+      "2.1.1",
+      "2.1.2",
       "2.2.0",
       "2.3.0",
-      "2.3.1",
-      "2.3.2",
-      "2.3.3",
+      "3.0.0"
+    ]
+  },
+  {
+    "package-name": "apache-airflow-providers-sftp",
+    "stable-version": "3.0.0",
+    "all-versions": [
+      "1.0.0",
+      "1.1.0",
+      "1.1.1",
+      "1.2.0",
+      "2.0.0",
+      "2.1.0",
+      "2.1.1",
+      "2.2.0",
+      "2.3.0",
+      "2.4.0",
+      "2.4.1",
+      "2.5.0",
+      "2.5.1",
+      "2.5.2",
+      "2.6.0",
+      "3.0.0"
+    ]
+  },
+  {
+    "package-name": "apache-airflow-providers-microsoft-psrp",
+    "stable-version": "2.0.0",
+    "all-versions": [
+      "1.0.0",
+      "1.0.1",
+      "1.1.0",
+      "1.1.1",
+      "1.1.2",
+      "1.1.3",
+      "1.1.4",
+      "2.0.0"
+    ]
+  },
+  {
+    "package-name": "apache-airflow-providers-sendgrid",
+    "stable-version": "3.0.0",
+    "all-versions": [
+      "1.0.0",
+      "1.0.1",
+      "1.0.2",
+      "2.0.0",
+      "2.0.1",
+      "2.0.2",
+      "2.0.3",
+      "2.0.4",
       "3.0.0"
     ]
   },
@@ -432,8 +556,284 @@
     ]
   },
   {
-    "package-name": "apache-airflow-providers-facebook",
+    "package-name": "apache-airflow-providers-apache-cassandra",
     "stable-version": "3.0.0",
+    "all-versions": [
+      "1.0.0",
+      "1.0.1",
+      "2.0.0",
+      "2.0.1",
+      "2.1.0",
+      "2.1.1",
+      "2.1.2",
+      "2.1.3",
+      "3.0.0"
+    ]
+  },
+  {
+    "package-name": "apache-airflow-providers-apache-kylin",
+    "stable-version": "3.0.0",
+    "all-versions": [
+      "1.0.0",
+      "1.0.1",
+      "2.0.0",
+      "2.0.1",
+      "2.0.2",
+      "2.0.3",
+      "2.0.4",
+      "3.0.0"
+    ]
+  },
+  {
+    "package-name": "apache-airflow-providers-airbyte",
+    "stable-version": "3.0.0",
+    "all-versions": [
+      "1.0.0",
+      "2.0.0",
+      "2.1.0",
+      "2.1.1",
+      "2.1.2",
+      "2.1.3",
+      "2.1.4",
+      "3.0.0"
+    ]
+  },
+  {
+    "package-name": "apache-airflow-providers-jenkins",
+    "stable-version": "3.0.0",
+    "all-versions": [
+      "1.0.0",
+      "1.0.1",
+      "1.1.0",
+      "2.0.0",
+      "2.0.1",
+      "2.0.2",
+      "2.0.3",
+      "2.0.4",
+      "2.0.5",
+      "2.0.6",
+      "2.0.7",
+      "2.1.0",
+      "3.0.0"
+    ]
+  },
+  {
+    "package-name": "apache-airflow-providers-plexus",
+    "stable-version": "3.0.0",
+    "all-versions": [
+      "1.0.0",
+      "1.0.1",
+      "2.0.0",
+      "2.0.1",
+      "2.0.2",
+      "2.0.3",
+      "2.0.4",
+      "3.0.0"
+    ]
+  },
+  {
+    "package-name": "apache-airflow-providers-opsgenie",
+    "stable-version": "4.0.0",
+    "all-versions": [
+      "1.0.0",
+      "1.0.1",
+      "1.0.2",
+      "2.0.0",
+      "2.0.1",
+      "3.0.0",
+      "3.0.1",
+      "3.0.2",
+      "3.0.3",
+      "3.1.0",
+      "4.0.0"
+    ]
+  },
+  {
+    "package-name": "apache-airflow-providers-apache-livy",
+    "stable-version": "3.0.0",
+    "all-versions": [
+      "1.0.0",
+      "1.0.1",
+      "1.1.0",
+      "2.0.0",
+      "2.1.0",
+      "2.2.0",
+      "2.2.1",
+      "2.2.2",
+      "2.2.3",
+      "3.0.0"
+    ]
+  },
+  {
+    "package-name": "apache-airflow-providers-http",
+    "stable-version": "3.0.0",
+    "all-versions": [
+      "1.0.0",
+      "1.1.0",
+      "1.1.1",
+      "2.0.0",
+      "2.0.1",
+      "2.0.2",
+      "2.0.3",
+      "2.1.0",
+      "2.1.1",
+      "2.1.2",
+      "3.0.0"
+    ]
+  },
+  {
+    "package-name": "apache-airflow-providers-microsoft-winrm",
+    "stable-version": "3.0.0",
+    "all-versions": [
+      "1.0.0",
+      "1.0.1",
+      "1.1.0",
+      "1.2.0",
+      "2.0.0",
+      "2.0.1",
+      "2.0.2",
+      "2.0.3",
+      "2.0.4",
+      "2.0.5",
+      "3.0.0"
+    ]
+  },
+  {
+    "package-name": "apache-airflow-providers-samba",
+    "stable-version": "4.0.0",
+    "all-versions": [
+      "1.0.0",
+      "1.0.1",
+      "2.0.0",
+      "3.0.0",
+      "3.0.1",
+      "3.0.2",
+      "3.0.3",
+      "3.0.4",
+      "4.0.0"
+    ]
+  },
+  {
+    "package-name": "apache-airflow-providers-apache-drill",
+    "stable-version": "2.0.0",
+    "all-versions": [
+      "1.0.0",
+      "1.0.1",
+      "1.0.2",
+      "1.0.3",
+      "1.0.4",
+      "2.0.0"
+    ]
+  },
+  {
+    "package-name": "apache-airflow-providers-docker",
+    "stable-version": "3.0.0",
+    "all-versions": [
+      "1.0.0",
+      "1.0.1",
+      "1.0.2",
+      "1.1.0",
+      "1.2.0",
+      "2.0.0",
+      "2.1.0",
+      "2.1.1",
+      "2.2.0",
+      "2.3.0",
+      "2.4.0",
+      "2.4.1",
+      "2.5.0",
+      "2.5.1",
+      "2.5.2",
+      "2.6.0",
+      "2.7.0",
+      "3.0.0"
+    ]
+  },
+  {
+    "package-name": "apache-airflow-providers-zendesk",
+    "stable-version": "4.0.0",
+    "all-versions": [
+      "1.0.0",
+      "1.0.1",
+      "2.0.0",
+      "2.0.1",
+      "3.0.0",
+      "3.0.1",
+      "3.0.2",
+      "3.0.3",
+      "4.0.0"
+    ]
+  },
+  {
+    "package-name": "apache-airflow-providers-openfaas",
+    "stable-version": "3.0.0",
+    "all-versions": [
+      "1.0.0",
+      "1.1.0",
+      "1.1.1",
+      "2.0.0",
+      "2.0.1",
+      "2.0.2",
+      "2.0.3",
+      "3.0.0"
+    ]
+  },
+  {
+    "package-name": "apache-airflow-providers-apache-beam",
+    "stable-version": "4.0.0",
+    "all-versions": [
+      "1.0.0",
+      "1.0.1",
+      "2.0.0",
+      "3.0.0",
+      "3.0.1",
+      "3.1.0",
+      "3.2.0",
+      "3.2.1",
+      "3.3.0",
+      "3.4.0",
+      "4.0.0"
+    ]
+  },
+  {
+    "package-name": "apache-airflow-providers-yandex",
+    "stable-version": "3.0.0",
+    "all-versions": [
+      "1.0.0",
+      "1.0.1",
+      "2.0.0",
+      "2.1.0",
+      "2.2.0",
+      "2.2.1",
+      "2.2.2",
+      "2.2.3",
+      "3.0.0"
+    ]
+  },
+  {
+    "package-name": "apache-airflow-providers-ssh",
+    "stable-version": "3.0.0",
+    "all-versions": [
+      "1.0.0",
+      "1.1.0",
+      "1.2.0",
+      "1.3.0",
+      "2.0.0",
+      "2.1.0",
+      "2.1.1",
+      "2.2.0",
+      "2.3.0",
+      "2.4.0",
+      "2.4.1",
+      "2.4.2",
+      "2.4.3",
+      "2.4.4",
+      "3.0.0"
+    ]
+  },
+  {
+    "package-name": "apache-airflow-providers-oracle",
+    "stable-version": "3.1.0",
     "all-versions": [
       "1.0.0",
       "1.0.1",
@@ -445,6 +845,87 @@
       "2.2.1",
       "2.2.2",
       "2.2.3",
+      "3.0.0",
+      "3.1.0"
+    ]
+  },
+  {
+    "package-name": "apache-airflow-providers-tableau",
+    "stable-version": "3.0.0",
+    "all-versions": [
+      "1.0.0",
+      "2.0.0",
+      "2.1.0",
+      "2.1.1",
+      "2.1.2",
+      "2.1.3",
+      "2.1.4",
+      "2.1.5",
+      "2.1.6",
+      "2.1.7",
+      "2.1.8",
+      "3.0.0"
+    ]
+  },
+  {
+    "package-name": "apache-airflow-providers-redis",
+    "stable-version": "3.0.0",
+    "all-versions": [
+      "1.0.0",
+      "1.0.1",
+      "2.0.0",
+      "2.0.1",
+      "2.0.2",
+      "2.0.3",
+      "2.0.4",
+      "3.0.0"
+    ]
+  },
+  {
+    "package-name": "apache-airflow-providers-presto",
+    "stable-version": "3.0.0",
+    "all-versions": [
+      "1.0.0",
+      "1.0.1",
+      "1.0.2",
+      "2.0.0",
+      "2.0.1",
+      "2.1.0",
+      "2.1.1",
+      "2.1.2",
+      "2.2.0",
+      "2.2.1",
+      "3.0.0"
+    ]
+  },
+  {
+    "package-name": "apache-airflow-providers-apache-sqoop",
+    "stable-version": "3.0.0",
+    "all-versions": [
+      "1.0.0",
+      "1.0.1",
+      "2.0.0",
+      "2.0.1",
+      "2.0.2",
+      "2.1.0",
+      "2.1.1",
+      "2.1.2",
+      "2.1.3",
+      "3.0.0"
+    ]
+  },
+  {
+    "package-name": "apache-airflow-providers-telegram",
+    "stable-version": "3.0.0",
+    "all-versions": [
+      "1.0.0",
+      "1.0.1",
+      "1.0.2",
+      "2.0.0",
+      "2.0.1",
+      "2.0.2",
+      "2.0.3",
+      "2.0.4",
       "3.0.0"
     ]
   },
@@ -477,17 +958,15 @@
     ]
   },
   {
-    "package-name": "apache-airflow-providers-apache-hive",
+    "package-name": "apache-airflow-providers-apache-druid",
     "stable-version": "3.0.0",
     "all-versions": [
       "1.0.0",
       "1.0.1",
-      "1.0.2",
-      "1.0.3",
+      "1.1.0",
       "2.0.0",
       "2.0.1",
       "2.0.2",
-      "2.0.3",
       "2.1.0",
       "2.2.0",
       "2.3.0",
@@ -498,24 +977,30 @@
     ]
   },
   {
-    "package-name": "apache-airflow-providers-asana",
-    "stable-version": "2.0.0",
-    "all-versions": [
-      "1.0.0",
-      "1.1.0",
-      "1.1.1",
-      "1.1.2",
-      "1.1.3",
-      "2.0.0"
-    ]
-  },
-  {
-    "package-name": "apache-airflow-providers-microsoft-mssql",
+    "package-name": "apache-airflow-providers-databricks",
     "stable-version": "3.0.0",
     "all-versions": [
       "1.0.0",
       "1.0.1",
-      "1.1.0",
+      "2.0.0",
+      "2.0.1",
+      "2.0.2",
+      "2.1.0",
+      "2.2.0",
+      "2.3.0",
+      "2.4.0",
+      "2.5.0",
+      "2.6.0",
+      "2.7.0",
+      "3.0.0"
+    ]
+  },
+  {
+    "package-name": "apache-airflow-providers-vertica",
+    "stable-version": "3.0.0",
+    "all-versions": [
+      "1.0.0",
+      "1.0.1",
       "2.0.0",
       "2.0.1",
       "2.1.0",
@@ -542,70 +1027,87 @@
     ]
   },
   {
-    "package-name": "apache-airflow-providers-docker",
+    "package-name": "apache-airflow-providers-odbc",
+    "stable-version": "3.0.0",
+    "all-versions": [
+      "1.0.0",
+      "1.0.1",
+      "2.0.0",
+      "2.0.1",
+      "2.0.2",
+      "2.0.3",
+      "2.0.4",
+      "3.0.0"
+    ]
+  },
+  {
+    "package-name": "apache-airflow-providers-arangodb",
+    "stable-version": "2.0.0",
+    "all-versions": [
+      "1.0.0",
+      "2.0.0"
+    ]
+  },
+  {
+    "package-name": "apache-airflow-providers-mongo",
+    "stable-version": "3.0.0",
+    "all-versions": [
+      "1.0.0",
+      "1.0.1",
+      "2.0.0",
+      "2.1.0",
+      "2.2.0",
+      "2.3.0",
+      "2.3.1",
+      "2.3.2",
+      "2.3.3",
+      "3.0.0"
+    ]
+  },
+  {
+    "package-name": "apache-airflow-providers-datadog",
+    "stable-version": "3.0.0",
+    "all-versions": [
+      "1.0.0",
+      "1.0.1",
+      "2.0.0",
+      "2.0.1",
+      "2.0.2",
+      "2.0.3",
+      "2.0.4",
+      "3.0.0"
+    ]
+  },
+  {
+    "package-name": "apache-airflow-providers-dingding",
     "stable-version": "3.0.0",
     "all-versions": [
       "1.0.0",
       "1.0.1",
       "1.0.2",
-      "1.1.0",
-      "1.2.0",
-      "2.0.0",
-      "2.1.0",
-      "2.1.1",
-      "2.2.0",
-      "2.3.0",
-      "2.4.0",
-      "2.4.1",
-      "2.5.0",
-      "2.5.1",
-      "2.5.2",
-      "2.6.0",
-      "2.7.0",
-      "3.0.0"
-    ]
-  },
-  {
-    "package-name": "apache-airflow-providers-http",
-    "stable-version": "3.0.0",
-    "all-versions": [
-      "1.0.0",
-      "1.1.0",
-      "1.1.1",
       "2.0.0",
       "2.0.1",
       "2.0.2",
       "2.0.3",
-      "2.1.0",
-      "2.1.1",
-      "2.1.2",
+      "2.0.4",
       "3.0.0"
     ]
   },
   {
-    "package-name": "apache-airflow-providers-alibaba",
-    "stable-version": "2.0.0",
+    "package-name": "apache-airflow-providers-slack",
+    "stable-version": "5.0.0",
     "all-versions": [
       "1.0.0",
-      "1.0.1",
-      "1.1.0",
-      "1.1.1",
-      "2.0.0"
-    ]
-  },
-  {
-    "package-name": "apache-airflow-providers-celery",
-    "stable-version": "3.0.0",
-    "all-versions": [
-      "1.0.0",
-      "1.0.1",
       "2.0.0",
-      "2.1.0",
-      "2.1.1",
-      "2.1.2",
-      "2.1.3",
-      "2.1.4",
-      "3.0.0"
+      "3.0.0",
+      "4.0.0",
+      "4.0.1",
+      "4.1.0",
+      "4.2.0",
+      "4.2.1",
+      "4.2.2",
+      "4.2.3",
+      "5.0.0"
     ]
   },
   {
@@ -648,11 +1150,26 @@
     ]
   },
   {
-    "package-name": "apache-airflow-providers-apache-cassandra",
+    "package-name": "apache-airflow-providers-cloudant",
     "stable-version": "3.0.0",
     "all-versions": [
       "1.0.0",
       "1.0.1",
+      "2.0.0",
+      "2.0.1",
+      "2.0.2",
+      "2.0.3",
+      "2.0.4",
+      "3.0.0"
+    ]
+  },
+  {
+    "package-name": "apache-airflow-providers-exasol",
+    "stable-version": "3.0.0",
+    "all-versions": [
+      "1.0.0",
+      "1.1.0",
+      "1.1.1",
       "2.0.0",
       "2.0.1",
       "2.1.0",
@@ -663,37 +1180,7 @@
     ]
   },
   {
-    "package-name": "apache-airflow-providers-trino",
-    "stable-version": "3.0.0",
-    "all-versions": [
-      "1.0.0",
-      "2.0.0",
-      "2.0.1",
-      "2.0.2",
-      "2.1.0",
-      "2.1.1",
-      "2.1.2",
-      "2.2.0",
-      "2.3.0",
-      "3.0.0"
-    ]
-  },
-  {
-    "package-name": "apache-airflow-providers-redis",
-    "stable-version": "3.0.0",
-    "all-versions": [
-      "1.0.0",
-      "1.0.1",
-      "2.0.0",
-      "2.0.1",
-      "2.0.2",
-      "2.0.3",
-      "2.0.4",
-      "3.0.0"
-    ]
-  },
-  {
-    "package-name": "apache-airflow-providers-grpc",
+    "package-name": "apache-airflow-providers-singularity",
     "stable-version": "3.0.0",
     "all-versions": [
       "1.0.0",
@@ -705,98 +1192,6 @@
       "2.0.3",
       "2.0.4",
       "3.0.0"
-    ]
-  },
-  {
-    "package-name": "apache-airflow-providers-presto",
-    "stable-version": "3.0.0",
-    "all-versions": [
-      "1.0.0",
-      "1.0.1",
-      "1.0.2",
-      "2.0.0",
-      "2.0.1",
-      "2.1.0",
-      "2.1.1",
-      "2.1.2",
-      "2.2.0",
-      "2.2.1",
-      "3.0.0"
-    ]
-  },
-  {
-    "package-name": "apache-airflow-providers-segment",
-    "stable-version": "3.0.0",
-    "all-versions": [
-      "1.0.0",
-      "1.0.1",
-      "2.0.0",
-      "2.0.1",
-      "2.0.2",
-      "2.0.3",
-      "2.0.4",
-      "3.0.0"
-    ]
-  },
-  {
-    "package-name": "apache-airflow-providers-vertica",
-    "stable-version": "3.0.0",
-    "all-versions": [
-      "1.0.0",
-      "1.0.1",
-      "2.0.0",
-      "2.0.1",
-      "2.1.0",
-      "2.1.1",
-      "2.1.2",
-      "2.1.3",
-      "3.0.0"
-    ]
-  },
-  {
-    "package-name": "apache-airflow-providers-mysql",
-    "stable-version": "3.0.0",
-    "all-versions": [
-      "1.0.0",
-      "1.0.1",
-      "1.0.2",
-      "1.1.0",
-      "2.0.0",
-      "2.1.0",
-      "2.1.1",
-      "2.2.0",
-      "2.2.1",
-      "2.2.2",
-      "2.2.3",
-      "3.0.0"
-    ]
-  },
-  {
-    "package-name": "apache-airflow-providers-yandex",
-    "stable-version": "3.0.0",
-    "all-versions": [
-      "1.0.0",
-      "1.0.1",
-      "2.0.0",
-      "2.1.0",
-      "2.2.0",
-      "2.2.1",
-      "2.2.2",
-      "2.2.3",
-      "3.0.0"
-    ]
-  },
-  {
-    "package-name": "helm-chart",
-    "stable-version": "1.6.0",
-    "all-versions": [
-      "1.0.0",
-      "1.1.0",
-      "1.2.0",
-      "1.3.0",
-      "1.4.0",
-      "1.5.0",
-      "1.6.0"
     ]
   },
   {
@@ -819,453 +1214,58 @@
     ]
   },
   {
-    "package-name": "apache-airflow-providers-opsgenie",
+    "package-name": "apache-airflow-providers-microsoft-azure",
     "stable-version": "4.0.0",
-    "all-versions": [
-      "1.0.0",
-      "1.0.1",
-      "1.0.2",
-      "2.0.0",
-      "2.0.1",
-      "3.0.0",
-      "3.0.1",
-      "3.0.2",
-      "3.0.3",
-      "3.1.0",
-      "4.0.0"
-    ]
-  },
-  {
-    "package-name": "apache-airflow-providers-microsoft-psrp",
-    "stable-version": "2.0.0",
-    "all-versions": [
-      "1.0.0",
-      "1.0.1",
-      "1.1.0",
-      "1.1.1",
-      "1.1.2",
-      "1.1.3",
-      "1.1.4",
-      "2.0.0"
-    ]
-  },
-  {
-    "package-name": "apache-airflow-providers-openfaas",
-    "stable-version": "3.0.0",
-    "all-versions": [
-      "1.0.0",
-      "1.1.0",
-      "1.1.1",
-      "2.0.0",
-      "2.0.1",
-      "2.0.2",
-      "2.0.3",
-      "3.0.0"
-    ]
-  },
-  {
-    "package-name": "apache-airflow-providers-sendgrid",
-    "stable-version": "3.0.0",
-    "all-versions": [
-      "1.0.0",
-      "1.0.1",
-      "1.0.2",
-      "2.0.0",
-      "2.0.1",
-      "2.0.2",
-      "2.0.3",
-      "2.0.4",
-      "3.0.0"
-    ]
-  },
-  {
-    "package-name": "apache-airflow-providers-arangodb",
-    "stable-version": "2.0.0",
-    "all-versions": [
-      "1.0.0",
-      "2.0.0"
-    ]
-  },
-  {
-    "package-name": "apache-airflow-providers-jdbc",
-    "stable-version": "3.0.0",
-    "all-versions": [
-      "1.0.0",
-      "1.0.1",
-      "2.0.0",
-      "2.0.1",
-      "2.1.0",
-      "2.1.1",
-      "2.1.2",
-      "2.1.3",
-      "3.0.0"
-    ]
-  },
-  {
-    "package-name": "apache-airflow-providers-cncf-kubernetes",
-    "stable-version": "4.1.0",
-    "all-versions": [
-      "1.0.0",
-      "1.0.1",
-      "1.0.2",
-      "1.1.0",
-      "1.2.0",
-      "2.0.0",
-      "2.0.1",
-      "2.0.2",
-      "2.0.3",
-      "2.1.0",
-      "2.2.0",
-      "3.0.0",
-      "3.0.1",
-      "3.0.2",
-      "3.1.0",
-      "3.1.1",
-      "3.1.2",
-      "4.0.0",
-      "4.0.1",
-      "4.0.2",
-      "4.1.0"
-    ]
-  },
-  {
-    "package-name": "apache-airflow-providers-samba",
-    "stable-version": "4.0.0",
-    "all-versions": [
-      "1.0.0",
-      "1.0.1",
-      "2.0.0",
-      "3.0.0",
-      "3.0.1",
-      "3.0.2",
-      "3.0.3",
-      "3.0.4",
-      "4.0.0"
-    ]
-  },
-  {
-    "package-name": "apache-airflow-providers-mongo",
-    "stable-version": "3.0.0",
-    "all-versions": [
-      "1.0.0",
-      "1.0.1",
-      "2.0.0",
-      "2.1.0",
-      "2.2.0",
-      "2.3.0",
-      "2.3.1",
-      "2.3.2",
-      "2.3.3",
-      "3.0.0"
-    ]
-  },
-  {
-    "package-name": "apache-airflow-providers-tableau",
-    "stable-version": "3.0.0",
-    "all-versions": [
-      "1.0.0",
-      "2.0.0",
-      "2.1.0",
-      "2.1.1",
-      "2.1.2",
-      "2.1.3",
-      "2.1.4",
-      "2.1.5",
-      "2.1.6",
-      "2.1.7",
-      "2.1.8",
-      "3.0.0"
-    ]
-  },
-  {
-    "package-name": "apache-airflow-providers-influxdb",
-    "stable-version": "2.0.0",
-    "all-versions": [
-      "1.0.0",
-      "1.1.0",
-      "1.1.1",
-      "1.1.2",
-      "1.1.3",
-      "2.0.0"
-    ]
-  },
-  {
-    "package-name": "apache-airflow-providers-apache-pig",
-    "stable-version": "3.0.0",
-    "all-versions": [
-      "1.0.0",
-      "1.0.1",
-      "2.0.0",
-      "2.0.1",
-      "2.0.2",
-      "2.0.3",
-      "2.0.4",
-      "3.0.0"
-    ]
-  },
-  {
-    "package-name": "apache-airflow-providers-sftp",
-    "stable-version": "3.0.0",
-    "all-versions": [
-      "1.0.0",
-      "1.1.0",
-      "1.1.1",
-      "1.2.0",
-      "2.0.0",
-      "2.1.0",
-      "2.1.1",
-      "2.2.0",
-      "2.3.0",
-      "2.4.0",
-      "2.4.1",
-      "2.5.0",
-      "2.5.1",
-      "2.5.2",
-      "2.6.0",
-      "3.0.0"
-    ]
-  },
-  {
-    "package-name": "apache-airflow-providers-elasticsearch",
-    "stable-version": "4.0.0",
-    "all-versions": [
-      "1.0.0",
-      "1.0.1",
-      "1.0.2",
-      "1.0.3",
-      "1.0.4",
-      "2.0.1",
-      "2.0.2",
-      "2.0.3",
-      "2.1.0",
-      "2.2.0",
-      "3.0.0",
-      "3.0.1",
-      "3.0.2",
-      "3.0.3",
-      "4.0.0"
-    ]
-  },
-  {
-    "package-name": "apache-airflow-providers-singularity",
-    "stable-version": "3.0.0",
-    "all-versions": [
-      "1.0.0",
-      "1.0.1",
-      "1.1.0",
-      "2.0.0",
-      "2.0.1",
-      "2.0.2",
-      "2.0.3",
-      "2.0.4",
-      "3.0.0"
-    ]
-  },
-  {
-    "package-name": "apache-airflow-providers-microsoft-winrm",
-    "stable-version": "3.0.0",
-    "all-versions": [
-      "1.0.0",
-      "1.0.1",
-      "1.1.0",
-      "1.2.0",
-      "2.0.0",
-      "2.0.1",
-      "2.0.2",
-      "2.0.3",
-      "2.0.4",
-      "2.0.5",
-      "3.0.0"
-    ]
-  },
-  {
-    "package-name": "apache-airflow-providers-cloudant",
-    "stable-version": "3.0.0",
-    "all-versions": [
-      "1.0.0",
-      "1.0.1",
-      "2.0.0",
-      "2.0.1",
-      "2.0.2",
-      "2.0.3",
-      "2.0.4",
-      "3.0.0"
-    ]
-  },
-  {
-    "package-name": "apache-airflow-providers-ftp",
-    "stable-version": "3.0.0",
-    "all-versions": [
-      "1.0.0",
-      "1.0.1",
-      "1.1.0",
-      "2.0.0",
-      "2.0.1",
-      "2.1.0",
-      "2.1.1",
-      "2.1.2",
-      "3.0.0"
-    ]
-  },
-  {
-    "package-name": "apache-airflow-providers-exasol",
-    "stable-version": "3.0.0",
-    "all-versions": [
-      "1.0.0",
-      "1.1.0",
-      "1.1.1",
-      "2.0.0",
-      "2.0.1",
-      "2.1.0",
-      "2.1.1",
-      "2.1.2",
-      "2.1.3",
-      "3.0.0"
-    ]
-  },
-  {
-    "package-name": "apache-airflow-providers-zendesk",
-    "stable-version": "4.0.0",
-    "all-versions": [
-      "1.0.0",
-      "1.0.1",
-      "2.0.0",
-      "2.0.1",
-      "3.0.0",
-      "3.0.1",
-      "3.0.2",
-      "3.0.3",
-      "4.0.0"
-    ]
-  },
-  {
-    "package-name": "apache-airflow-providers-plexus",
-    "stable-version": "3.0.0",
-    "all-versions": [
-      "1.0.0",
-      "1.0.1",
-      "2.0.0",
-      "2.0.1",
-      "2.0.2",
-      "2.0.3",
-      "2.0.4",
-      "3.0.0"
-    ]
-  },
-  {
-    "package-name": "apache-airflow-providers-dingding",
-    "stable-version": "3.0.0",
-    "all-versions": [
-      "1.0.0",
-      "1.0.1",
-      "1.0.2",
-      "2.0.0",
-      "2.0.1",
-      "2.0.2",
-      "2.0.3",
-      "2.0.4",
-      "3.0.0"
-    ]
-  },
-  {
-    "package-name": "apache-airflow-providers-jira",
-    "stable-version": "3.0.0",
-    "all-versions": [
-      "1.0.0",
-      "1.0.1",
-      "1.0.2",
-      "2.0.0",
-      "2.0.1",
-      "2.0.2",
-      "2.0.3",
-      "2.0.4",
-      "2.0.5",
-      "3.0.0"
-    ]
-  },
-  {
-    "package-name": "apache-airflow-providers-ssh",
-    "stable-version": "3.0.0",
     "all-versions": [
       "1.0.0",
       "1.1.0",
       "1.2.0",
       "1.3.0",
       "2.0.0",
-      "2.1.0",
-      "2.1.1",
-      "2.2.0",
-      "2.3.0",
-      "2.4.0",
-      "2.4.1",
-      "2.4.2",
-      "2.4.3",
-      "2.4.4",
-      "3.0.0"
+      "3.0.0",
+      "3.1.0",
+      "3.1.1",
+      "3.2.0",
+      "3.3.0",
+      "3.4.0",
+      "3.5.0",
+      "3.6.0",
+      "3.7.0",
+      "3.7.1",
+      "3.7.2",
+      "3.8.0",
+      "3.9.0",
+      "4.0.0"
     ]
   },
   {
-    "package-name": "apache-airflow-providers-discord",
-    "stable-version": "3.0.0",
+    "package-name": "apache-airflow-providers-alibaba",
+    "stable-version": "2.0.0",
+    "all-versions": [
+      "1.0.0",
+      "1.0.1",
+      "1.1.0",
+      "1.1.1",
+      "2.0.0"
+    ]
+  },
+  {
+    "package-name": "apache-airflow-providers-salesforce",
+    "stable-version": "4.0.0",
     "all-versions": [
       "1.0.0",
       "1.0.1",
       "2.0.0",
-      "2.0.1",
-      "2.0.2",
-      "2.0.3",
-      "2.0.4",
-      "2.1.4",
-      "3.0.0"
-    ]
-  },
-  {
-    "package-name": "apache-airflow-providers-sqlite",
-    "stable-version": "3.0.0",
-    "all-versions": [
-      "1.0.0",
-      "1.0.1",
-      "1.0.2",
-      "2.0.0",
-      "2.0.1",
-      "2.1.0",
-      "2.1.1",
-      "2.1.2",
-      "2.1.3",
-      "3.0.0"
-    ]
-  },
-  {
-    "package-name": "apache-airflow-providers-apache-hdfs",
-    "stable-version": "3.0.0",
-    "all-versions": [
-      "1.0.0",
-      "1.0.1",
-      "2.0.0",
-      "2.1.0",
-      "2.1.1",
-      "2.2.0",
-      "2.2.1",
-      "2.2.2",
-      "2.2.3",
-      "3.0.0"
-    ]
-  },
-  {
-    "package-name": "apache-airflow-providers-papermill",
-    "stable-version": "3.0.0",
-    "all-versions": [
-      "1.0.0",
-      "1.0.1",
-      "1.0.2",
-      "2.0.0",
-      "2.0.1",
-      "2.1.0",
-      "2.2.0",
-      "2.2.1",
-      "2.2.2",
-      "2.2.3",
-      "3.0.0"
+      "3.0.0",
+      "3.1.0",
+      "3.2.0",
+      "3.3.0",
+      "3.4.0",
+      "3.4.1",
+      "3.4.2",
+      "3.4.3",
+      "3.4.4",
+      "4.0.0"
     ]
   }
 ]
