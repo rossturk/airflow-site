@@ -14,6 +14,149 @@
     
     
     <item>
+      <title>Blog: Apache Airflow 2.5.0: Tick-Tock</title>
+      <link>/blog/airflow-2.5.0/</link>
+      <pubDate>Fri, 02 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/airflow-2.5.0/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Apache Airfow 2.5 has just been released, barely two and a half months after 2.4!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Details&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;📦 PyPI: &lt;a href=&#34;https://pypi.org/project/apache-airflow/2.5.0/&#34;&gt;https://pypi.org/project/apache-airflow/2.5.0/&lt;/a&gt; &lt;br&gt;
+📚 Docs: &lt;a href=&#34;https://airflow.apache.org/docs/apache-airflow/2.5.0/&#34;&gt;https://airflow.apache.org/docs/apache-airflow/2.5.0/&lt;/a&gt; &lt;br&gt;
+🛠️ Release Notes: &lt;a href=&#34;https://airflow.apache.org/docs/apache-airflow/2.5.0/release_notes.html&#34;&gt;https://airflow.apache.org/docs/apache-airflow/2.5.0/release_notes.html&lt;/a&gt; &lt;br&gt;
+🐳 Docker Image: docker pull apache/airflow:2.5.0 &lt;br&gt;
+🚏 Constraints: &lt;a href=&#34;https://github.com/apache/airflow/tree/constraints-2.5.0&#34;&gt;https://github.com/apache/airflow/tree/constraints-2.5.0&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This quicker release cadence is a departure from our previous habit of releasing every five-to-seven months and was a deliberate effort to listen to you, our users, and get the changes and improvements into your workflows earlier.&lt;/p&gt;
+&lt;h2 id=&#34;usability-improvements-to-the-datasets-ui&#34;&gt;Usability improvements to the Datasets UI&lt;/h2&gt;
+&lt;p&gt;When we released Dataset aware scheduling in September we knew that the tools we gave to manage the Datasets were very much a Minimum Viable Product, and in the last two months the committers and contributors have been hard at work at making the UI much more usable when it comes to Datasets.&lt;/p&gt;
+&lt;p&gt;But we we aren&amp;rsquo;t done yet - keep an eye out for more improvements coming over the next couple of releases too.&lt;/p&gt;
+&lt;h2 id=&#34;greatly-improved-airflow-dags-test-command&#34;&gt;Greatly improved &lt;code&gt;airflow dags test&lt;/code&gt; command&lt;/h2&gt;
+&lt;p&gt;This airflow subcommand has been rethought and re-optimized to make it much easier to test your DAGs locally - the major changes are:&lt;/p&gt;
+&lt;p&gt;a. Task logs are visible right there in the console, instead of hidden away inside the task log files
+b. It is about an order of magnitude quicker to run the tasks than before (i.e. it gets to running the task code so much quicker)
+c. Everything runs in one process, so you can put a breakpoint in your IDE, and configure it to run &lt;code&gt;airflow dags test &amp;lt;mydag&amp;gt;&lt;/code&gt; then debug code!&lt;/p&gt;
+&lt;h2 id=&#34;auto-tailing-task-logs-in-the-grid-view&#34;&gt;Auto tailing task logs in the Grid view&lt;/h2&gt;
+&lt;p&gt;Hopefully the headline says enough. It&amp;rsquo;s lovely, go check it out.&lt;/p&gt;
+&lt;h2 id=&#34;more-improvments-to-dynamic-task-mapping&#34;&gt;More improvments to Dynamic-Task mapping&lt;/h2&gt;
+&lt;p&gt;In a similar vein to the improvements to the Dataset (UI), we have continued to iterate on and improve the feature we first added in Airflow 2.3, Dynamic Task Mapping, and 2.5 includes &lt;a href=&#34;https://github.com/apache/airflow/pulls?q=is%3Apr+author%3Auranusjr+is%3Aclosed+milestone%3A%22Airflow+2.5.0%22&#34;&gt;dozens of improvements&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;thanks-to-the-contributors&#34;&gt;Thanks to the contributors&lt;/h2&gt;
+&lt;p&gt;Andrey Anshin, Ash Berlin-Taylor, blag, Bolke de Bruin, Brent Bovenzi, Chenglong Yan, Daniel Standish, Dov Benyomin Sohacheski, Elad Kalif, Ephraim Anierobi, Jarek Potiuk, Jed Cunningham, Jorrick Sleijster, Michael Petro, Niko, Pierre Jeambrun, Tzu-ping Chung and many more, over 75 of you. Thank you!&lt;/p&gt;
+&lt;p&gt;And a special thank you to Ephraim who tirelessly worked behind the scenes as release manager!&lt;/p&gt;
+&lt;p&gt;A much shorter change log than 2.4, but I think you&amp;rsquo;ll agree, some great changes.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Blog: Apache Airflow 2.4.0: That Data Aware Release</title>
+      <link>/blog/airflow-2.4.0/</link>
+      <pubDate>Mon, 19 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/airflow-2.4.0/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Apache Airflow 2.4.0 contains over 650 &amp;ldquo;user-facing&amp;rdquo; commits (excluding commits to providers or chart) and over 870 total. That includes 46 new features, 39 improvements, 52 bug fixes, and several documentation changes.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Details&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;📦 PyPI: &lt;a href=&#34;https://pypi.org/project/apache-airflow/2.4.0/&#34;&gt;https://pypi.org/project/apache-airflow/2.4.0/&lt;/a&gt; &lt;br&gt;
+📚 Docs: &lt;a href=&#34;https://airflow.apache.org/docs/apache-airflow/2.4.0/&#34;&gt;https://airflow.apache.org/docs/apache-airflow/2.4.0/&lt;/a&gt; &lt;br&gt;
+🛠️ Release Notes: &lt;a href=&#34;https://airflow.apache.org/docs/apache-airflow/2.4.0/release_notes.html&#34;&gt;https://airflow.apache.org/docs/apache-airflow/2.4.0/release_notes.html&lt;/a&gt; &lt;br&gt;
+🐳 Docker Image: docker pull apache/airflow:2.4.0 &lt;br&gt;
+🚏 Constraints: &lt;a href=&#34;https://github.com/apache/airflow/tree/constraints-2.4.0&#34;&gt;https://github.com/apache/airflow/tree/constraints-2.4.0&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;data-aware-scheduling-aip-48&#34;&gt;Data-aware scheduling (AIP-48)&lt;/h2&gt;
+&lt;p&gt;This one is big. Airflow now has the ability to schedule DAGs based on other tasks updating datasets.&lt;/p&gt;
+&lt;p&gt;What does this mean, exactly? This is a great new feature that lets DAG authors create smaller, more self-contained DAGs, which chain together into a larger data-based workflow. If you are currently using &lt;code&gt;ExternalTaskSensor&lt;/code&gt; or &lt;code&gt;TriggerDagRunOperator&lt;/code&gt; you should take a look at datasets &amp;ndash; in most cases you can replace them with something that will speed up the scheduling!&lt;/p&gt;
+&lt;p&gt;But enough talking, lets have a short example. First lets write a simple DAG with a task called &lt;code&gt;my_task&lt;/code&gt; that produces a dataset called &lt;code&gt;my-dataset&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;airflow&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Dataset&lt;/span&gt;
+
+
+&lt;span class=&#34;n&#34;&gt;dataset&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Dataset&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;uri&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;my-dataset&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;with&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DAG&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dag_id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;producer&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;...&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;nd&#34;&gt;@task&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;outlets&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dataset&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;my_task&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;():&lt;/span&gt;
+        &lt;span class=&#34;o&#34;&gt;...&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Datasets are defined by a URI. Now, we can create a second DAG (&lt;code&gt;consumer&lt;/code&gt;) that gets scheduled whenever this dataset changes:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;
+&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;airflow&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Dataset&lt;/span&gt;
+
+
+&lt;span class=&#34;n&#34;&gt;dataset&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Dataset&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;uri&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;my-dataset&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;with&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DAG&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dag_id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;dataset-consumer&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;schedule&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dataset&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]):&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;...&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;With these two DAGs, the instant &lt;code&gt;my_task&lt;/code&gt; finishes, Airflow will create the DAG run for the &lt;code&gt;dataset-consumer&lt;/code&gt; workflow.&lt;/p&gt;
+&lt;p&gt;We know that what exists right now won&amp;rsquo;t fit all use cases that people might wish for datasets, and in the coming minor releases (2.5, 2.6, etc.) we will expand and improve upon this foundation.&lt;/p&gt;
+&lt;p&gt;Datasets represent the abstract concept of a dataset, and (for now) do not have any direct read or write capability - in this release we are adding the foundational feature that we will build upon in the future - and it&amp;rsquo;s part of our goal to have smaller releases to get new features in your hands sooner!&lt;/p&gt;
+&lt;p&gt;For more information on datasets, see the &lt;a href=&#34;https://airflow.apache.org/docs/apache-airflow/2.4.0/concepts/datasets.html&#34;&gt;documentation on Data-aware scheduling&lt;/a&gt;. That includes details on how datasets are identified (URIs), how you can depend on multiple datasets, and how to think about what a dataset is (hint: don&amp;rsquo;t include &amp;ldquo;date partitions&amp;rdquo; in a dataset, it&amp;rsquo;s higher level than that).&lt;/p&gt;
+&lt;h2 id=&#34;easier-management-of-conflicting-python-dependencies-using-the-new-externalpythonoperator&#34;&gt;Easier management of conflicting python dependencies using the new ExternalPythonOperator&lt;/h2&gt;
+&lt;p&gt;As much as we wish all python libraries could be used happily together that sadly isn&amp;rsquo;t the world we live in, and sometimes there are conflicts when trying to install multiple python libraries in an Airflow install &amp;ndash; right now we hear this a lot with &lt;code&gt;dbt-core&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;To make this easier we have introduced &lt;code&gt;@task.external_python&lt;/code&gt; (and the matching &lt;code&gt;ExternalPythonOperator&lt;/code&gt;) that lets you run an python function as an Airflow task in a pre-configured virtual env, or even a whole different python version. For example:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@task&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;external_python&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;python&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;/opt/venvs/task_deps/bin/python&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;my_task&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;data_interval_start&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;data_interval_env&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Looking at data between &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;data_interval_start&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt; and &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;data_interval_end&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;...&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;There are a few subtlties as to what you need installed in the virtual env depending on which context variables you access, so be sure to read the &lt;a href=&#34;http://airflow.apache.org/docs/apache-airflow/2.4.0/howto/operator/python.html#externalpythonoperator&#34;&gt;how-to on using the ExternalPythonOperator&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;more-improvements-to-dynamic-task-mapping-aip-42&#34;&gt;More improvements to Dynamic Task Mapping (AIP-42)&lt;/h2&gt;
+&lt;p&gt;You asked, we listened. Dynamic task mapping now includes support for:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;expand_kwargs&lt;/code&gt;: To assign multiple parameters to a non-TaskFlow operator.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;zip&lt;/code&gt;: To combine multiple things without cross-product.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;map&lt;/code&gt;: To transform the parameters just before the task is run.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For more information on dynamic task mapping, see the new sections of the doc on &lt;a href=&#34;https://airflow.apache.org/docs/apache-airflow/2.4.0/concepts/dynamic-task-mapping.html#transforming-mapped-data&#34;&gt;Transforming Mapped Data&lt;/a&gt;, &lt;a href=&#34;https://airflow.apache.org/docs/apache-airflow/2.4.0/concepts/dynamic-task-mapping.html#combining-upstream-data-aka-zipping&#34;&gt;Combining upstream data (aka &amp;ldquo;zipping&amp;rdquo;)&lt;/a&gt;, and &lt;a href=&#34;https://airflow.apache.org/docs/apache-airflow/2.4.0/concepts/dynamic-task-mapping.html#assigning-multiple-parameters-to-a-non-taskflow-operator&#34;&gt;Assigning multiple parameters to a non-TaskFlow operator&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;auto-register-dags-used-in-a-context-manager-no-more-as-dag-needed&#34;&gt;Auto-register DAGs used in a context manager (no more &lt;code&gt;as dag:&lt;/code&gt; needed)&lt;/h2&gt;
+&lt;p&gt;This one is a small quality of life improvement, and I don&amp;rsquo;t want to admit how many times I forgot the &lt;code&gt;as dag:&lt;/code&gt;, or worse, had &lt;code&gt;as dag:&lt;/code&gt; repeated.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;
+&lt;span class=&#34;k&#34;&gt;with&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DAG&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dag_id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;example&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dag&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+  &lt;span class=&#34;o&#34;&gt;...&lt;/span&gt;
+
+
+&lt;span class=&#34;nd&#34;&gt;@dag&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dag_maker&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;():&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;...&lt;/span&gt;
+
+
+&lt;span class=&#34;n&#34;&gt;dag2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dag_maker&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;can become&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;
+&lt;span class=&#34;k&#34;&gt;with&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DAG&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dag_id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;example&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;...&lt;/span&gt;
+
+
+&lt;span class=&#34;nd&#34;&gt;@dag&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;my_dag&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;():&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;...&lt;/span&gt;
+
+
+&lt;span class=&#34;n&#34;&gt;my_dag&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If you want to disable the behaviour for any reason, set &lt;code&gt;auto_register=False&lt;/code&gt; on the DAG:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# This dag will not be picked up by Airflow as it&amp;#39;s not assigned to a variable&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;with&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DAG&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dag_id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;example&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;auto_register&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;False&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;...&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;additional-improvements&#34;&gt;Additional improvements&lt;/h2&gt;
+&lt;p&gt;With over 650 commits the &lt;a href=&#34;https://airflow.apache.org/docs/apache-airflow/2.4.0/release_notes.html#airflow-2-4-0-2022-09-19&#34;&gt;full list of features, fixes and changes&lt;/a&gt; is too big to go in to here (check out the release notes for a full list), but some noteworthy or interesting small features include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Auto-refresh on the home page&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;@task.short_circuit&lt;/code&gt; TaskFlow decorator&lt;/li&gt;
+&lt;li&gt;Add roles delete command to cli&lt;/li&gt;
+&lt;li&gt;Add support for &lt;code&gt;TaskGroup&lt;/code&gt; in &lt;code&gt;ExternalTaskSensor&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;@task.kubernetes&lt;/code&gt; taskflow decorator&lt;/li&gt;
+&lt;li&gt;Add experimental &lt;code&gt;parsing_context&lt;/code&gt; to enable optimization of Dynamic DAG handling in workers&lt;/li&gt;
+&lt;li&gt;Consolidate to one &lt;code&gt;schedule&lt;/code&gt; param&lt;/li&gt;
+&lt;li&gt;Allow showing non-sensitive config values in Admin -&amp;gt; Configuration (rather than all or nothing)&lt;/li&gt;
+&lt;li&gt;Operator name separate from class (no more &lt;code&gt;_PythonDecoratedOperator&lt;/code&gt; when using TaskFlow)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;contributors&#34;&gt;Contributors&lt;/h2&gt;
+&lt;p&gt;Thanks to everyone who contributed to this release, including Andrey Anshin, Ash Berlin-Taylor, Bartłomiej Hirsz, Brent Bovenzi, Chenglong Yan, D. Ferruzzi, Daniel Standish, Drew Hubl, Elad Kalif, Ephraim Anierobi, Jarek Potiuk, Jed Cunningham, Josh Fell, Mark Norman Francis, Niko, Tzu-ping Chung, Vincent, Wojciech Januszek, chethanuk-plutoflume, pierrejeambrun, and everyone else who committed, all 152 of you! You are what makes Airflow the successful project that it is!&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Blog: Airflow Survey 2022</title>
       <link>/blog/airflow-survey-2022/</link>
       <pubDate>Fri, 17 Jun 2022 00:00:00 +0000</pubDate>

@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-    <html xmlns="http://www.w3.org/1999/xhtml">
+    <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
         <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -594,10 +594,11 @@
 <span class="c1"># KIND, either express or implied.  See the License for the</span>
 <span class="c1"># specific language governing permissions and limitations</span>
 <span class="c1"># under the License.</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">annotations</span>
 
 <span class="kn">import</span> <span class="nn">time</span>
 <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
-<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">TYPE_CHECKING</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Sequence</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">TYPE_CHECKING</span><span class="p">,</span> <span class="n">Sequence</span>
 
 <span class="kn">from</span> <span class="nn">kylinpy</span> <span class="kn">import</span> <span class="n">kylinpy</span>
 
@@ -625,14 +626,14 @@
 <span class="sd">    :param command: (kylin command include &#39;build&#39;, &#39;merge&#39;, &#39;refresh&#39;, &#39;delete&#39;,</span>
 <span class="sd">        &#39;build_streaming&#39;, &#39;merge_streaming&#39;, &#39;refresh_streaming&#39;, &#39;disable&#39;, &#39;enable&#39;,</span>
 <span class="sd">        &#39;purge&#39;, &#39;clone&#39;, &#39;drop&#39;.</span>
-<span class="sd">        build - use /kylin/api/cubes/{cubeName}/build rest api,and buildType is ‘BUILD’,</span>
+<span class="sd">        build - use /kylin/api/cubes/{cubeName}/build rest api,and buildType is &#39;BUILD&#39;,</span>
 <span class="sd">        and you should give start_time and end_time</span>
-<span class="sd">        refresh - use build rest api,and buildType is ‘REFRESH’</span>
-<span class="sd">        merge - use build rest api,and buildType is ‘MERGE’</span>
-<span class="sd">        build_streaming - use /kylin/api/cubes/{cubeName}/build2 rest api,and buildType is ‘BUILD’</span>
+<span class="sd">        refresh - use build rest api,and buildType is &#39;REFRESH&#39;</span>
+<span class="sd">        merge - use build rest api,and buildType is &#39;MERGE&#39;</span>
+<span class="sd">        build_streaming - use /kylin/api/cubes/{cubeName}/build2 rest api,and buildType is &#39;BUILD&#39;</span>
 <span class="sd">        and you should give offset_start and offset_end</span>
-<span class="sd">        refresh_streaming - use build2 rest api,and buildType is ‘REFRESH’</span>
-<span class="sd">        merge_streaming - use build2 rest api,and buildType is ‘MERGE’</span>
+<span class="sd">        refresh_streaming - use build2 rest api,and buildType is &#39;REFRESH&#39;</span>
+<span class="sd">        merge_streaming - use build2 rest api,and buildType is &#39;MERGE&#39;</span>
 <span class="sd">        delete - delete segment, and you should give segment_name value</span>
 <span class="sd">        disable - disable cube</span>
 <span class="sd">        enable - enable cube</span>
@@ -680,15 +681,15 @@
         <span class="bp">self</span><span class="p">,</span>
         <span class="o">*</span><span class="p">,</span>
         <span class="n">kylin_conn_id</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;kylin_default&#39;</span><span class="p">,</span>
-        <span class="n">project</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="n">cube</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="n">dsn</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="n">command</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="n">start_time</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="n">end_time</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="n">offset_start</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="n">offset_end</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="n">segment_name</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">project</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">cube</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">dsn</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">command</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">start_time</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">end_time</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">offset_start</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">offset_end</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">segment_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">is_track_job</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
         <span class="n">interval</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">60</span><span class="p">,</span>
         <span class="n">timeout</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">24</span><span class="p">,</span>
@@ -712,7 +713,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">eager_error_status</span> <span class="o">=</span> <span class="n">eager_error_status</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">jobs_error_status</span> <span class="o">=</span> <span class="p">[</span><span class="n">stat</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="k">for</span> <span class="n">stat</span> <span class="ow">in</span> <span class="n">eager_error_status</span><span class="p">]</span>
 
-<div class="viewcode-block" id="KylinCubeOperator.execute"><a class="viewcode-back" href="../../../../../../_api/airflow/providers/apache/kylin/operators/kylin_cube/index.html#airflow.providers.apache.kylin.operators.kylin_cube.KylinCubeOperator.execute">[docs]</a>    <span class="k">def</span> <span class="nf">execute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">:</span> <span class="s1">&#39;Context&#39;</span><span class="p">):</span>
+<div class="viewcode-block" id="KylinCubeOperator.execute"><a class="viewcode-back" href="../../../../../../_api/airflow/providers/apache/kylin/operators/kylin_cube/index.html#airflow.providers.apache.kylin.operators.kylin_cube.KylinCubeOperator.execute">[docs]</a>    <span class="k">def</span> <span class="nf">execute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">:</span> <span class="n">Context</span><span class="p">):</span>
 
         <span class="n">_hook</span> <span class="o">=</span> <span class="n">KylinHook</span><span class="p">(</span><span class="n">kylin_conn_id</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">kylin_conn_id</span><span class="p">,</span> <span class="n">project</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">project</span><span class="p">,</span> <span class="n">dsn</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">dsn</span><span class="p">)</span>
 
@@ -966,8 +967,10 @@
         <script data-url_root="../../../../../../" id="documentation_options" src="../../../../../../_static/documentation_options.js"></script>
         <script src="../../../../../../_static/jquery.js"></script>
         <script src="../../../../../../_static/underscore.js"></script>
+        <script src="../../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../../../../_static/doctools.js"></script>
         <script src="../../../../../../_static/clipboard.min.js"></script>
         <script src="../../../../../../_static/copybutton.js"></script>
+        <script src="../../../../../../_static/js/globaltoc.js"></script>
 </body>
 </html>
